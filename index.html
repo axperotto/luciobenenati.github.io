@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- (1) Title max ~60 caratteri -->
+  <title>Lucio Benenati | Fashion Designer Accessori & Headpiece</title>
+
+  <meta name="description" content="Portfolio e contatti di Lucio Benenati, Fashion Designer specializzato in accessori, headpiece e lavorazioni sartoriali. Special projects e R&D, design di monili e fashion styling." />
+  <meta name="author" content="Lucio Benenati" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- (1) Canonical de-commentato (placeholder evidente) -->
+  <link rel="canonical" href="https://tuodominio.it/" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Lucio Benenati | Fashion Designer" />
+  <meta property="og:description" content="Accessori, headpiece, lavorazioni sartoriali. Portfolio, esperienze e contatti." />
+  <meta property="og:url" content="https://tuodominio.it/" />
+  <meta property="og:locale" content="it_IT" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lucio Benenati | Fashion Designer" />
+  <meta name="twitter:description" content="Portfolio e contatti. Haute couture, artigianato Made in Italy, special projects e R&D." />
+
+  <!-- JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lucio Benenati",
+    "jobTitle": "Fashion Designer – Accessories & Headpiece (Special Projects, R&D)",
+    "description": "Fashion Designer specializzato nella progettazione di accessori e headpiece con esperienza in haute couture, artigianato Made in Italy, lavorazioni sartoriali, fashion styling e design di monili.",
+    "url": "https://tuodominio.it/",
+    "email": "mailto:luciobenenati@hotmail.com",
+    "telephone": "+39 3283745523",
+    "address": { "@type": "PostalAddress", "addressCountry": "IT" },
+    "sameAs": [
+      "https://www.linkedin.com/in/luciobenenati",
+      "https://instagram.com/tuoprofilo",
+      "https://www.behance.net/tuoprofilo"
+    ],
+    "knowsAbout": [
+      "Accessories design",
+      "Headpiece design",
+      "Haute couture",
+      "Made in Italy craftsmanship",
+      "Sartorial techniques",
+      "Fashion styling",
+      "Jewels design",
+      "Special projects",
+      "Research & Development"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --gold:#c9a84c; --gold-light:#e8c97a; --cream:#f5f0e8; --dark:#0d0d0d; --dark2:#111; }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--dark);color:var(--cream);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 64px;display:flex;justify-content:space-between;align-items:center;transition:background .4s,border-bottom .4s;}
+    nav.scrolled{background:rgba(13,13,13,.96);border-bottom:1px solid rgba(201,168,76,.15);}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;letter-spacing:4px;color:var(--cream);text-decoration:none;text-transform:uppercase;}
+    .nav-links{display:flex;gap:36px;list-style:none;}
+    .nav-links a{color:rgba(245,240,232,.5);text-decoration:none;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;transition:color .3s;}
+    .nav-links a:hover{color:var(--gold);}
+
+    /* HERO */
+    .hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:0;bottom:0;left:55%;width:1px;background:linear-gradient(to bottom,transparent,rgba(201,168,76,.25) 25%,rgba(201,168,76,.25) 75%,transparent);}
+    .hero-left{display:flex;flex-direction:column;justify-content:center;padding:130px 60px 80px 80px;position:relative;z-index:1;}
+    .hero-right{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:130px 60px 80px;position:relative;z-index:1;background:linear-gradient(160deg,rgba(201,168,76,.03),transparent 60%);}
+
+    .eyebrow{font-size:10px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:28px;animation:fadeUp .9s ease both;}
+    h1.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(64px,8vw,108px);font-weight:300;line-height:.88;margin-bottom:22px;animation:fadeUp .9s ease .15s both;}
+    h1.hero-name em{font-style:italic;color:var(--gold-light);}
+
+    /* (2) tag H2 per contesto SEO */
+    h2.hero-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.2vw,24px);font-style:italic;font-weight:300;color:rgba(245,240,232,.55);margin-bottom:36px;line-height:1.5;animation:fadeUp .9s ease .3s both;}
+
+    .hero-desc{font-size:12.5px;line-height:1.95;color:rgba(245,240,232,.42);max-width:440px;margin-bottom:48px;animation:fadeUp .9s ease .45s both;}
+    .hero-desc strong{color:rgba(245,240,232,.82);font-weight:500;}
+
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .9s ease .6s both;}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all .35s ease;cursor:pointer;border:none;font-family:'Montserrat',sans-serif;}
+    .btn-primary{background:var(--gold);color:var(--dark);border:1px solid var(--gold);}
+    .btn-primary:hover{background:transparent;color:var(--gold);}
+    .btn-outline{border:1px solid rgba(201,168,76,.4);color:rgba(245,240,232,.55);}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+    /* RIGHT CARD */
+    .dg-card{width:100%;max-width:380px;border:1px solid rgba(201,168,76,.2);padding:50px 42px;position:relative;animation:fadeUp .9s ease .5s both;}
+    .dg-card::before{content:'';position:absolute;top:-1px;left:42px;width:55px;height:2px;background:var(--gold);}
+    .dg-label{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .dg-brand{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;letter-spacing:1px;margin-bottom:20px;line-height:1.1;}
+    .dg-roles{list-style:none;display:flex;flex-direction:column;gap:12px;}
+    .dg-roles li{font-size:11px;color:rgba(245,240,232,.5);padding-left:16px;position:relative;line-height:1.65;}
+    .dg-roles li::before{content:'–';position:absolute;left:0;color:var(--gold);}
+
+    .stats-row{display:flex;border:1px solid rgba(201,168,76,.15);border-top:none;width:100%;max-width:380px;animation:fadeUp .9s ease .7s both;}
+    .stat{flex:1;padding:26px 16px;text-align:center;border-right:1px solid rgba(201,168,76,.12);}
+    .stat:last-child{border-right:none;}
+    .stat-n{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--gold);line-height:1;}
+    .stat-l{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,240,232,.28);margin-top:5px;}
+
+    /* SECTIONS */
+    .section{padding:110px 80px;position:relative;z-index:1;}
+    .sec-tag{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,62px);font-weight:300;line-height:1.05;margin-bottom:58px;}
+    .sec-title em{font-style:italic;color:var(--gold-light);}
+
+    /* SKILLS */
+    #competenze{background:var(--dark2);}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.1);}
+    .skill-card{background:var(--dark2);padding:44px 38px;transition:background .3s;}
+    .skill-card:hover{background:#161616;}
+    .skill-glyph{font-size:26px;color:var(--gold);margin-bottom:16px;display:block;}
+    .skill-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:10px;}
+    .skill-card p{font-size:11.5px;line-height:1.85;color:rgba(245,240,232,.42);}
+
+    /* (3) PORTFOLIO */
+    #portfolio{background:var(--dark);}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;}
+    figure{margin:0;}
+    .port-item{position:relative;border:1px solid rgba(201,168,76,.14);overflow:hidden;background:linear-gradient(160deg,rgba(201,168,76,.06),transparent 60%);}
+    .port-item img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform .55s ease,opacity .55s ease;opacity:.95;}
+    .port-item:hover img{transform:scale(1.06);opacity:1;}
+    .port-caption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(to top,rgba(13,13,13,.88),rgba(13,13,13,0));border-top:1px solid rgba(201,168,76,.10);transition:transform .35s ease;}
+    .cap-title{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(245,240,232,.75);margin-bottom:6px;font-weight:600;}
+    .cap-desc{font-size:11.5px;line-height:1.7;color:rgba(245,240,232,.40);max-width:64ch;}
+    .span-6{grid-column:span 6;}
+    .span-4{grid-column:span 4;}
+    .span-8{grid-column:span 8;}
+    .span-12{grid-column:span 12;}
+    .tall{min-height:520px;}
+    .med{min-height:420px;}
+    .small{min-height:320px;}
+
+    /* ESPERIENZE */
+    .exp-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,.09);}
+    .exp-card{background:var(--dark);padding:50px;position:relative;overflow:hidden;transition:background .3s;}
+    .exp-card:hover{background:#0f0f0f;}
+    .exp-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s ease;}
+    .exp-card:hover::after{width:100%;}
+    .exp-role-tag{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .exp-card h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin-bottom:16px;line-height:1.2;}
+    .exp-card p{font-size:12px;line-height:1.9;color:rgba(245,240,232,.42);}
+
+    /* MANIFESTO (1: ridotto keyword stuffing, più LSI) */
+    #manifesto{background:linear-gradient(160deg,#120f04,#0d0d0d 70%);text-align:center;}
+    .gold-line{width:55px;height:1px;background:var(--gold);margin:0 auto 48px;}
+    .manifesto-q{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.5vw,44px);font-style:italic;font-weight:300;line-height:1.5;max-width:920px;margin:0 auto 48px;}
+    .manifesto-q span{color:var(--gold-light);}
+    .manifesto-attr{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,168,76,.55);}
+
+    /* CONTATTI */
+    #contatti{background:var(--dark2);}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;}
+    .contact-left h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;margin-bottom:14px;}
+    .contact-left p{font-size:12px;line-height:1.9;color:rgba(245,240,232,.42);margin-bottom:40px;}
+    .contact-links{display:flex;flex-direction:column;}
+    .contact-link-item{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid rgba(201,168,76,.12);text-decoration:none;color:var(--cream);transition:color .3s;}
+    .contact-link-item:first-child{border-top:1px solid rgba(201,168,76,.12);}
+    .contact-link-item:hover{color:var(--gold);}
+    .cli-left{display:flex;flex-direction:column;gap:4px;}
+    .cli-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(245,240,232,.3);}
+    .cli-value{font-size:13px;}
+    .cli-arrow{font-size:20px;color:var(--gold);transition:transform .3s;}
+    .contact-link-item:hover .cli-arrow{transform:translateX(6px);}
+    .expertise-ul{list-style:none;}
+    .expertise-ul li{padding:15px 0;border-bottom:1px solid rgba(201,168,76,.08);font-size:12.5px;color:rgba(245,240,232,.6);display:flex;justify-content:space-between;align-items:center;}
+    .expertise-ul li:first-child{border-top:1px solid rgba(201,168,76,.08);}
+    .expertise-ul li span{font-size:10px;color:var(--gold);}
+
+    /* FOOTER (4: social proof) */
+    footer{padding:36px 80px;border-top:1px solid rgba(201,168,76,.1);display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;}
+    .footer-copy{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,240,232,.18);}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap;}
+    .footer-link{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,240,232,.3);text-decoration:none;transition:color .3s;}
+    .footer-link:hover{color:var(--gold);}
+
+    /* ANIMATIONS */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+    .reveal{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    /* RESPONSIVE */
+    @media(max-width:860px){
+      .hero{grid-template-columns:1fr;}
+      .hero-right,.hero::before{display:none;}
+      .hero-left{padding:120px 28px 80px;}
+      nav{padding:18px 28px;}
+      .nav-links{display:none;}
+      .section{padding:80px 28px;}
+      .skills-grid{grid-template-columns:1fr;}
+      .exp-wrapper{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr;gap:48px;}
+      footer{flex-direction:column;align-items:flex-start;gap:12px;padding:32px 28px;}
+      .portfolio-grid{grid-template-columns:repeat(6,1fr);}
+      .span-12,.span-8,.span-6,.span-4{grid-column:span 6;}
+      .tall,.med,.small{min-height:320px;}
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <nav id="main-nav">
+    <a href="#top" class="nav-logo">L · B</a>
+    <ul class="nav-links">
+      <li><a href="#competenze">Competenze</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#esperienze">Esperienze</a></li>
+      <li><a href="#manifesto">Manifesto</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" aria-label="Presentazione Lucio Benenati Fashion Designer">
+    <div class="hero-left">
+      <p class="eyebrow">Fashion Designer · Special Projects · R&amp;D</p>
+      <h1 class="hero-name">Lucio<br><em>Benenati</em></h1>
+
+      <!-- (2) tag H2 -->
+      <h2 class="hero-tagline">Fashion Designer di accessori &amp; headpiece couture</h2>
+
+      <p class="hero-desc">
+        Fashion Designer creativo specializzato nella progettazione di <strong>accessori</strong> e <strong>headpiece</strong>.
+        Lavoro tra <strong>haute couture</strong>, artigianato <strong>Made in Italy</strong> e <strong>lavorazioni sartoriali</strong>,
+        con focus su special projects, ricerca materiali e sviluppo di pezzi ad alto impatto visivo.
+      </p>
+
+      <div class="cta-row">
+        <a href="https://www.linkedin.com/in/luciobenenati" target="_blank" rel="noopener noreferrer" class="btn btn-primary">LinkedIn</a>
+        <a href="#portfolio" class="btn btn-outline">Vedi Portfolio</a>
+        <a href="#contatti" class="btn btn-outline">Contatti</a>
+      </div>
+    </div>
+
+    <div class="hero-right" aria-label="Highlights">
+      <div class="dg-card">
+        <p class="dg-label">Focus</p>
+        <h2 class="dg-brand">Design &amp;<br>Sviluppo</h2>
+        <ul class="dg-roles">
+          <li>Special projects · Research &amp; Development</li>
+          <li>Haute couture e artigianato Made in Italy</li>
+          <li>Ricerca materiali, prototipi, campionari</li>
+          <li>Coordinamento creativo e controllo qualità</li>
+        </ul>
+      </div>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-n">20+</div>
+          <div class="stat-l">Anni esperienza</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">1.404</div>
+          <div class="stat-l">Follower</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">500+</div>
+          <div class="stat-l">Collegamenti</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETENZE -->
+  <section class="section" id="competenze" aria-label="Competenze Lucio Benenati">
+    <p class="sec-tag reveal">Expertise</p>
+    <h2 class="sec-title reveal">Il mio<br><em>Savoir-Faire</em></h2>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <span class="skill-glyph" aria-hidden="true">♦</span>
+        <h3>Design Accessori Lusso</h3>
+        <p>Progettazione di accessori esclusivi con attenzione al dettaglio estetico, proporzioni e resa fotografica in contesto couture.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-glyph" aria-hidden="true">✦</span>
+        <h3>Headpiece Couture</h3>
+        <p>Creazione di headpiece scenografici e raffinati per sfilate, editoriali e progetti speciali, con ricerca di forme e materiali.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-glyph" aria-hidden="true">◈</span>
+        <h3>Design di Monili</h3>
+        <p>Sviluppo di gioielli e componenti decorativi, equilibrio tra luce, volumi, finiture e identità visiva.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-glyph" aria-hidden="true">⬡</span>
+        <h3>Ricerca &amp; Materiali</h3>
+        <p>Selezione e sviluppo materiali pregiati, studio cromatico, fattibilità produttiva e coerenza con il concept.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-glyph" aria-hidden="true">◉</span>
+        <h3>Special Projects</h3>
+        <p>Progetti speciali ad alto contenuto creativo, prototipazione e supervisione dei campionari con standard di qualità elevati.</p>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-glyph" aria-hidden="true">❋</span>
+        <h3>Fashion Styling</h3>
+        <p>Supporto creativo per set editoriali: costruzione di look, accessori e dettagli per storytelling visivo coerente e memorabile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- (3) PORTFOLIO -->
+  <section id="portfolio" class="section" aria-label="Portfolio di Lucio Benenati">
+    <p class="sec-tag reveal">Portfolio</p>
+    <h2 class="sec-title reveal">Progetti<br><em>Selezionati</em></h2>
+
+    <div class="portfolio-grid">
+      <figure class="port-item span-6 tall reveal">
+        <img src="Unga/E7685590-B8DA-46FE-90C1-1F8816F1424E.jpeg" loading="lazy"
+             alt="Dettaglio gioiello couture con velluto bordeaux, fiori dorati, perle e cristallo centrale, lavorazione artigianale Made in Italy">
+        <figcaption class="port-caption">
+          <div class="cap-title">Dettaglio couture</div>
+          <div class="cap-desc">Velluto, metallo dorato, perle e cristalli: finiture sartoriali e texture ricca.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="port-item span-6 tall reveal">
+        <img src="Unga/C2E9AC4B-4358-4666-96B2-52D1E664252B.jpeg" loading="lazy"
+             alt="Bracciale gioiello con pietre taglio marquise e grande gemma fucsia, styling editoriale haute couture">
+        <figcaption class="port-caption">
+          <div class="cap-title">Design di monili</div>
+          <div class="cap-desc">Composizione luminosa con pietra statement e catena dorata.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="port-item span-8 med reveal">
+        <img src="Unga/1DEBAA56-E9ED-4CF7-9E90-E30CFA9B9664.jpeg" loading="lazy"
+             alt="Selezione di gioielli e accessori dorati con cristalli e dettagli floreali, coordinamento per fashion styling">
+        <figcaption class="port-caption">
+          <div class="cap-title">Coordinati &amp; styling</div>
+          <div class="cap-desc">Set di accessori e gioielli: contrasti tra cristalli, fiocchi e componenti dorati.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="port-item span-4 med reveal">
+        <img src="Unga/6B877FC8-D27E-4694-9B6D-2CC86B2907A1.jpeg" loading="lazy"
+             alt="Spilla gioiello con uccellino, perle e fiori in cristallo su base dorata, ispirazione barocca per editoriale moda">
+        <figcaption class="port-caption">
+          <div class="cap-title">Motivi barocchi</div>
+          <div class="cap-desc">Volumi ornamentali e scintillii, pensati per set couture.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="port-item span-12 med reveal">
+        <img src="Unga/A51BAA77-9969-4A6F-BE0B-97D70A2B2D12.jpeg" loading="lazy"
+             alt="Corona headpiece dorata con filigrana e rose rosse in tessuto, accessorio scenografico per alta moda">
+        <figcaption class="port-caption">
+          <div class="cap-title">Headpiece couture</div>
+          <div class="cap-desc">Filigrana dorata e rose in tessuto: costruzione teatrale, finitura da passerella.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="port-item span-6 med reveal">
+        <img src="Unga/985FD493-564B-46C9-A83C-42F411E7170A.jpeg" loading="lazy"
+             alt="Orecchini e spilla con cluster di perle e cristallo centrale, lavorazione artigianale su base metallica dorata">
+        <figcaption class="port-caption">
+          <div class="cap-title">Perle &amp; cristalli</div>
+          <div class="cap-desc">Texture materica con perle multiple e punto luce centrale.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="port-item span-6 med reveal">
+        <img src="Unga/4306D39B-3CE8-4502-9176-CB5554D01AE2.jpeg" loading="lazy"
+             alt="Fashion editorial con headpiece floreale couture su modella, styling per servizio fotografico alta moda">
+        <figcaption class="port-caption">
+          <div class="cap-title">Fashion styling</div>
+          <div class="cap-desc">Headpiece protagonista su set editoriale: equilibrio tra romantico e scenografico.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="port-item span-6 med reveal">
+        <img src="Unga/232657F3-32DB-4149-8F99-70B22F887809.jpeg" loading="lazy"
+             alt="Composizione di gioielli dorati con perle e pietre azzurre su base vintage, presentazione collezione accessori">
+        <figcaption class="port-caption">
+          <div class="cap-title">Set gioielli</div>
+          <div class="cap-desc">Palette oro e azzurro: lettura contemporanea del gusto vintage.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="port-item span-6 med reveal">
+        <img src="Unga/E1731334-DDDD-4219-AA0E-A5C64F3B484C.jpeg" loading="lazy"
+             alt="Headpiece scultoreo bianco con elementi floreali e raggi, design sperimentale per progetto artistico">
+        <figcaption class="port-caption">
+          <div class="cap-title">Sperimentazione</div>
+          <div class="cap-desc">Strutture leggere e volumi architettonici: ricerca formale e impatto scenico.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="port-item span-12 med reveal">
+        <img src="Unga/579BA431-8032-4588-8A04-21632E223A2B.jpeg" loading="lazy"
+             alt="Ritratto editoriale con headpiece floreale e piume, styling haute couture per fotografia moda">
+        <figcaption class="port-caption">
+          <div class="cap-title">Editoriale</div>
+          <div class="cap-desc">Composizione floreale e piume: volume e movimento per fotografia moda.</div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ESPERIENZE -->
+  <section class="section" id="esperienze" aria-label="Esperienze professionali di Lucio Benenati">
+    <p class="sec-tag reveal">Esperienza</p>
+    <h2 class="sec-title reveal">Percorso<br><em>Professionale</em></h2>
+
+    <div class="exp-wrapper">
+      <article class="exp-card reveal">
+        <p class="exp-role-tag">Special Projects · R&amp;D</p>
+        <h3>Design e sviluppo per progetti ad alto impatto</h3>
+        <p>Ideazione, prototipazione e supervisione del processo creativo: ricerca materiali, sviluppo campionari e controllo qualità, con attenzione a coerenza estetica e identità del progetto.</p>
+      </article>
+
+      <article class="exp-card reveal">
+        <p class="exp-role-tag">Haute couture · Artigianato Made in Italy</p>
+        <h3>Lavorazioni sartoriali e dettagli decorativi</h3>
+        <p>Realizzazione e coordinamento di lavorazioni decorative e finiture, con focus su resa editoriale e precisione artigianale.</p>
+      </article>
+
+      <article class="exp-card reveal">
+        <p class="exp-role-tag">Fashion styling</p>
+        <h3>Supporto creativo per set editoriali</h3>
+        <p>Consulenza creativa per la produzione di accessori e pezzi unici destinati a shooting fotografici e storytelling visivo.</p>
+      </article>
+
+      <article class="exp-card reveal">
+        <p class="exp-role-tag">Produzione &amp; qualità</p>
+        <h3>Dal concept alla realizzazione</h3>
+        <p>Gestione del flusso dall’idea al risultato finale: fornitori, campionatura, rifiniture e qualità, con un approccio pratico e orientato al risultato.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="section" id="manifesto" aria-label="Manifesto creativo Lucio Benenati">
+    <div class="gold-line"></div>
+    <blockquote class="manifesto-q reveal">
+      "Il lusso non è una parola: è <span>artigianato Made in Italy</span>, ricerca materica e <span>lavorazioni sartoriali</span>.
+      Il mio obiettivo è creare pezzi che funzionano dal vivo e in camera: forti, coerenti, memorabili."
+    </blockquote>
+    <div class="gold-line"></div>
+    <p class="manifesto-attr reveal">— Lucio Benenati · Fashion Designer</p>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="section" id="contatti" aria-label="Contatti Lucio Benenati">
+    <p class="sec-tag reveal">Contatti</p>
+    <h2 class="sec-title reveal">Collaboriamo<br><em>Insieme</em></h2>
+
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <h3>Disponibile per collaborazioni e progetti speciali</h3>
+        <p>Per proposte professionali, special projects, consulenze creative e richieste stampa/editoriali.</p>
+
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/luciobenenati" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+            <div class="cli-left">
+              <span class="cli-label">LinkedIn</span>
+              <span class="cli-value">Lucio Benenati</span>
+            </div>
+            <span class="cli-arrow">→</span>
+          </a>
+
+          <a href="mailto:luciobenenati@hotmail.com" class="contact-link-item">
+            <div class="cli-left">
+              <span class="cli-label">Email</span>
+              <span class="cli-value">luciobenenati@hotmail.com</span>
+            </div>
+            <span class="cli-arrow">→</span>
+          </a>
+
+          <a href="tel:+393283745523" class="contact-link-item">
+            <div class="cli-left">
+              <span class="cli-label">Telefono</span>
+              <span class="cli-value">+39 328 374 5523</span>
+            </div>
+            <span class="cli-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <ul class="expertise-ul" aria-label="Aree di competenza">
+          <li>Haute couture <span>✦</span></li>
+          <li>Artigianato Made in Italy <span>✦</span></li>
+          <li>Lavorazioni sartoriali <span>✦</span></li>
+          <li>Special projects <span>✦</span></li>
+          <li>Research &amp; Development <span>✦</span></li>
+          <li>Fashion styling <span>✦</span></li>
+          <li>Design di monili <span>✦</span></li>
+          <li>Prototipazione &amp; qualità <span>✦</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-copy">© 2026 Lucio Benenati — Fashion Designer</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/luciobenenati" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn ↗</a>
+      <a href="https://instagram.com/tuoprofilo" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram ↗</a>
+      <a href="https://www.behance.net/tuoprofilo" target="_blank" rel="noopener noreferrer" class="footer-link">Behance ↗</a>
+      <a href="#top" class="footer-link">Top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => obs.observe(el));
+
+    // Smooth scroll interni
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id === '#') return;
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
