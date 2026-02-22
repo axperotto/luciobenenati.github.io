@@ -7,4 +7,4 @@ Sito portfolio statico di **Lucio Benenati**.
 - `Unga/`: archivio immagini usate nella sezione portfolio.
 
 ## Documentazione cartelle
-- `Unga/README.md`: catalogo immagini e descrizioni d'uso.
+- `Unga/README.md`: catalogo immagini, descrizioni e distinzione tra immagini in uso e archiviate.
