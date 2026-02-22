@@ -4,14 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- (1) Title max ~60 caratteri -->
   <title>Lucio Benenati | Fashion Designer Accessori & Headpiece</title>
 
   <meta name="description" content="Portfolio e contatti di Lucio Benenati, Fashion Designer specializzato in accessori, headpiece e lavorazioni sartoriali. Special projects e R&D, design di monili e fashion styling." />
   <meta name="author" content="Lucio Benenati" />
   <meta name="robots" content="index, follow" />
-
-  <!-- (1) Canonical de-commentato (placeholder evidente) -->
 
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Lucio Benenati | Fashion Designer" />
@@ -22,7 +19,6 @@
   <meta name="twitter:title" content="Lucio Benenati | Fashion Designer" />
   <meta name="twitter:description" content="Portfolio e contatti. Haute couture, artigianato Made in Italy, special projects e R&D." />
 
-  <!-- JSON-LD Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,13 +56,21 @@
     html{scroll-behavior:smooth;}
     body{background:var(--dark);color:var(--cream);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;}
 
-    /* NAV */
+    /* NAV & LANG SWITCHER */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 64px;display:flex;justify-content:space-between;align-items:center;transition:background .4s,border-bottom .4s;}
     nav.scrolled{background:rgba(13,13,13,.96);border-bottom:1px solid rgba(201,168,76,.15);}
     .nav-logo{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;letter-spacing:4px;color:var(--cream);text-decoration:none;text-transform:uppercase;}
+    
+    .nav-center { display:flex; flex:1; justify-content:center; }
     .nav-links{display:flex;gap:36px;list-style:none;}
     .nav-links a{color:rgba(245,240,232,.5);text-decoration:none;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;transition:color .3s;}
     .nav-links a:hover{color:var(--gold);}
+
+    .lang-switcher { display: flex; gap: 8px; align-items: center; }
+    .lang-btn { background: none; border: none; color: rgba(245,240,232,.4); font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 2px; cursor: pointer; transition: color 0.3s; padding: 4px; }
+    .lang-btn:hover { color: var(--gold-light); }
+    .lang-btn.active { color: var(--gold); }
+    .lang-sep { color: rgba(201,168,76,.3); font-size: 10px; }
 
     /* HERO */
     .hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;position:relative;overflow:hidden;}
@@ -78,7 +82,6 @@
     h1.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(64px,8vw,108px);font-weight:300;line-height:.88;margin-bottom:22px;animation:fadeUp .9s ease .15s both;}
     h1.hero-name em{font-style:italic;color:var(--gold-light);}
 
-    /* (2) tag H2 per contesto SEO */
     h2.hero-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.2vw,24px);font-style:italic;font-weight:300;color:rgba(245,240,232,.55);margin-bottom:36px;line-height:1.5;animation:fadeUp .9s ease .3s both;}
 
     .hero-desc{font-size:12.5px;line-height:1.95;color:rgba(245,240,232,.42);max-width:440px;margin-bottom:48px;animation:fadeUp .9s ease .45s both;}
@@ -121,7 +124,7 @@
     .skill-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:10px;}
     .skill-card p{font-size:11.5px;line-height:1.85;color:rgba(245,240,232,.42);}
 
-    /* (3) PORTFOLIO */
+    /* PORTFOLIO */
     #portfolio{background:var(--dark);}
     .portfolio-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;}
     figure{margin:0;}
@@ -149,7 +152,7 @@
     .exp-card h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin-bottom:16px;line-height:1.2;}
     .exp-card p{font-size:12px;line-height:1.9;color:rgba(245,240,232,.42);}
 
-    /* MANIFESTO (1: ridotto keyword stuffing, più LSI) */
+    /* MANIFESTO */
     #manifesto{background:linear-gradient(160deg,#120f04,#0d0d0d 70%);text-align:center;}
     .gold-line{width:55px;height:1px;background:var(--gold);margin:0 auto 48px;}
     .manifesto-q{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.5vw,44px);font-style:italic;font-weight:300;line-height:1.5;max-width:920px;margin:0 auto 48px;}
@@ -173,9 +176,9 @@
     .expertise-ul{list-style:none;}
     .expertise-ul li{padding:15px 0;border-bottom:1px solid rgba(201,168,76,.08);font-size:12.5px;color:rgba(245,240,232,.6);display:flex;justify-content:space-between;align-items:center;}
     .expertise-ul li:first-child{border-top:1px solid rgba(201,168,76,.08);}
-    .expertise-ul li span{font-size:10px;color:var(--gold);}
+    .expertise-ul li span.icon{font-size:10px;color:var(--gold);}
 
-    /* FOOTER (4: social proof) */
+    /* FOOTER */
     footer{padding:36px 80px;border-top:1px solid rgba(201,168,76,.1);display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;}
     .footer-copy{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,240,232,.18);}
     .footer-links{display:flex;gap:18px;flex-wrap:wrap;}
@@ -193,7 +196,7 @@
       .hero-right,.hero::before{display:none;}
       .hero-left{padding:120px 28px 80px;}
       nav{padding:18px 28px;}
-      .nav-links{display:none;}
+      .nav-center{display:none;}
       .section{padding:80px 28px;}
       .skills-grid{grid-template-columns:1fr;}
       .exp-wrapper{grid-template-columns:1fr;}
@@ -210,24 +213,32 @@
 
   <nav id="main-nav">
     <a href="#top" class="nav-logo">L · B</a>
-    <ul class="nav-links">
-      <li><a href="#competenze">Competenze</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#esperienze">Esperienze</a></li>
-      <li><a href="#manifesto">Manifesto</a></li>
-      <li><a href="#contatti">Contatti</a></li>
-    </ul>
+    
+    <div class="nav-center">
+      <ul class="nav-links">
+        <li><a href="#competenze" data-i18n="nav_skills">Competenze</a></li>
+        <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="#esperienze" data-i18n="nav_exp">Esperienze</a></li>
+        <li><a href="#manifesto" data-i18n="nav_manifesto">Manifesto</a></li>
+        <li><a href="#contatti" data-i18n="nav_contact">Contatti</a></li>
+      </ul>
+    </div>
+
+    <div class="lang-switcher">
+      <button id="lang-it" class="lang-btn active" onclick="setLang('it')">IT</button>
+      <span class="lang-sep">|</span>
+      <button id="lang-en" class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
   </nav>
 
   <section class="hero" aria-label="Presentazione Lucio Benenati Fashion Designer">
     <div class="hero-left">
-      <p class="eyebrow">Fashion Designer · Special Projects · R&amp;D</p>
+      <p class="eyebrow" data-i18n="hero_eyebrow">Fashion Designer · Special Projects · R&amp;D</p>
       <h1 class="hero-name">Lucio<br><em>Benenati</em></h1>
 
-      <!-- (2) tag H2 -->
-      <h2 class="hero-tagline">Fashion Designer di accessori &amp; headpiece couture</h2>
+      <h2 class="hero-tagline" data-i18n="hero_tagline">Fashion Designer di accessori &amp; headpiece couture</h2>
 
-      <p class="hero-desc">
+      <p class="hero-desc" data-i18n="hero_desc">
         Fashion Designer creativo specializzato nella progettazione di <strong>accessori</strong> e <strong>headpiece</strong>.
         Lavoro tra <strong>haute couture</strong>, artigianato <strong>Made in Italy</strong> e <strong>lavorazioni sartoriali</strong>,
         con focus su special projects, ricerca materiali e sviluppo di pezzi ad alto impatto visivo.
@@ -235,228 +246,213 @@
 
       <div class="cta-row">
         <a href="https://www.linkedin.com/in/luciobenenati" target="_blank" rel="noopener noreferrer" class="btn btn-primary">LinkedIn</a>
-        <a href="#portfolio" class="btn btn-outline">Vedi Portfolio</a>
-        <a href="#contatti" class="btn btn-outline">Contatti</a>
+        <a href="#portfolio" class="btn btn-outline" data-i18n="btn_portfolio">Vedi Portfolio</a>
+        <a href="#contatti" class="btn btn-outline" data-i18n="btn_contact">Contatti</a>
       </div>
     </div>
 
     <div class="hero-right" aria-label="Highlights">
       <div class="dg-card">
-        <p class="dg-label">Focus</p>
-        <h2 class="dg-brand">Design &amp;<br>Sviluppo</h2>
+        <p class="dg-label" data-i18n="dg_label">Focus</p>
+        <h2 class="dg-brand" data-i18n="dg_brand">Design &amp;<br>Sviluppo</h2>
         <ul class="dg-roles">
-          <li>Special projects · Research &amp; Development</li>
-          <li>Haute couture e artigianato Made in Italy</li>
-          <li>Ricerca materiali, prototipi, campionari</li>
-          <li>Coordinamento creativo e controllo qualità</li>
+          <li data-i18n="dg_li_1">Special projects · Research &amp; Development</li>
+          <li data-i18n="dg_li_2">Haute couture e artigianato Made in Italy</li>
+          <li data-i18n="dg_li_3">Ricerca materiali, prototipi, campionari</li>
+          <li data-i18n="dg_li_4">Coordinamento creativo e controllo qualità</li>
         </ul>
       </div>
       <div class="stats-row">
         <div class="stat">
           <div class="stat-n">20+</div>
-          <div class="stat-l">Anni esperienza</div>
+          <div class="stat-l" data-i18n="stat_1">Anni esperienza</div>
         </div>
         <div class="stat">
           <div class="stat-n">1.404</div>
-          <div class="stat-l">Follower</div>
+          <div class="stat-l" data-i18n="stat_2">Follower</div>
         </div>
         <div class="stat">
           <div class="stat-n">500+</div>
-          <div class="stat-l">Collegamenti</div>
+          <div class="stat-l" data-i18n="stat_3">Collegamenti</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- COMPETENZE -->
   <section class="section" id="competenze" aria-label="Competenze Lucio Benenati">
-    <p class="sec-tag reveal">Expertise</p>
-    <h2 class="sec-title reveal">Il mio<br><em>Savoir-Faire</em></h2>
+    <p class="sec-tag reveal" data-i18n="sec_tag_skills">Expertise</p>
+    <h2 class="sec-title reveal" data-i18n="sec_title_skills">Il mio<br><em>Savoir-Faire</em></h2>
 
     <div class="skills-grid">
       <div class="skill-card reveal">
         <span class="skill-glyph" aria-hidden="true">♦</span>
-        <h3>Design Accessori Lusso</h3>
-        <p>Progettazione di accessori esclusivi con attenzione al dettaglio estetico, proporzioni e resa fotografica in contesto couture.</p>
+        <h3 data-i18n="skill_1_title">Design Accessori Lusso</h3>
+        <p data-i18n="skill_1_desc">Progettazione di accessori esclusivi con attenzione al dettaglio estetico, proporzioni e resa fotografica in contesto couture.</p>
       </div>
       <div class="skill-card reveal">
         <span class="skill-glyph" aria-hidden="true">✦</span>
-        <h3>Headpiece Couture</h3>
-        <p>Creazione di headpiece scenografici e raffinati per sfilate, editoriali e progetti speciali, con ricerca di forme e materiali.</p>
+        <h3 data-i18n="skill_2_title">Headpiece Couture</h3>
+        <p data-i18n="skill_2_desc">Creazione di headpiece scenografici e raffinati per sfilate, editoriali e progetti speciali, con ricerca di forme e materiali.</p>
       </div>
       <div class="skill-card reveal">
         <span class="skill-glyph" aria-hidden="true">◈</span>
-        <h3>Design di Monili</h3>
-        <p>Sviluppo di gioielli e componenti decorativi, equilibrio tra luce, volumi, finiture e identità visiva.</p>
+        <h3 data-i18n="skill_3_title">Design di Monili</h3>
+        <p data-i18n="skill_3_desc">Sviluppo di gioielli e componenti decorativi, equilibrio tra luce, volumi, finiture e identità visiva.</p>
       </div>
       <div class="skill-card reveal">
         <span class="skill-glyph" aria-hidden="true">⬡</span>
-        <h3>Ricerca &amp; Materiali</h3>
-        <p>Selezione e sviluppo materiali pregiati, studio cromatico, fattibilità produttiva e coerenza con il concept.</p>
+        <h3 data-i18n="skill_4_title">Ricerca &amp; Materiali</h3>
+        <p data-i18n="skill_4_desc">Selezione e sviluppo materiali pregiati, studio cromatico, fattibilità produttiva e coerenza con il concept.</p>
       </div>
       <div class="skill-card reveal">
         <span class="skill-glyph" aria-hidden="true">◉</span>
-        <h3>Special Projects</h3>
-        <p>Progetti speciali ad alto contenuto creativo, prototipazione e supervisione dei campionari con standard di qualità elevati.</p>
+        <h3 data-i18n="skill_5_title">Special Projects</h3>
+        <p data-i18n="skill_5_desc">Progetti speciali ad alto contenuto creativo, prototipazione e supervisione dei campionari con standard di qualità elevati.</p>
       </div>
       <div class="skill-card reveal">
         <span class="skill-glyph" aria-hidden="true">❋</span>
-        <h3>Fashion Styling</h3>
-        <p>Supporto creativo per set editoriali: costruzione di look, accessori e dettagli per storytelling visivo coerente e memorabile.</p>
+        <h3 data-i18n="skill_6_title">Fashion Styling</h3>
+        <p data-i18n="skill_6_desc">Supporto creativo per set editoriali: costruzione di look, accessori e dettagli per storytelling visivo coerente e memorabile.</p>
       </div>
     </div>
   </section>
 
-  <!-- (3) PORTFOLIO -->
   <section id="portfolio" class="section" aria-label="Portfolio di Lucio Benenati">
-    <p class="sec-tag reveal">Portfolio</p>
-    <h2 class="sec-title reveal">Progetti<br><em>Selezionati</em></h2>
+    <p class="sec-tag reveal" data-i18n="sec_tag_port">Portfolio</p>
+    <h2 class="sec-title reveal" data-i18n="sec_title_port">Progetti<br><em>Selezionati</em></h2>
 
     <div class="portfolio-grid">
       <figure class="port-item span-6 tall reveal">
-        <img src="Unga/VogueSposa.JPG" loading="lazy"
-             alt="Scatto editoriale Vogue Sposa con headpiece couture e styling accessori">
+        <img src="Unga/VogueSposa.JPG" loading="lazy" alt="Scatto editoriale Vogue Sposa con headpiece couture e styling accessori">
         <figcaption class="port-caption">
-          <div class="cap-title">Editoriale Vogue Sposa</div>
-          <div class="cap-desc">Scatto editoriale Vogue Sposa con focus su accessori couture e ricerca stilistica.</div>
+          <div class="cap-title" data-i18n="port_1_title">Editoriale Vogue Sposa</div>
+          <div class="cap-desc" data-i18n="port_1_desc">Scatto editoriale Vogue Sposa con focus su accessori couture e ricerca stilistica.</div>
         </figcaption>
       </figure>
 
       <figure class="port-item span-6 tall reveal">
-        <img src="Unga/BraccialeStrass.JPG" loading="lazy"
-             alt="Bracciale gioiello con pietre taglio marquise, styling editoriale haute couture">
+        <img src="Unga/BraccialeStrass.JPG" loading="lazy" alt="Bracciale gioiello con pietre taglio marquise, styling editoriale haute couture">
         <figcaption class="port-caption">
-          <div class="cap-title">Design di monili</div>
-          <div class="cap-desc">Composizione luminosa con pietra statement e catena dorata.</div>
+          <div class="cap-title" data-i18n="port_2_title">Design di monili</div>
+          <div class="cap-desc" data-i18n="port_2_desc">Composizione luminosa con pietra statement e catena dorata.</div>
         </figcaption>
       </figure>
 
       <figure class="port-item span-8 med reveal">
-        <img src="Unga/GabbiaVogueSposa.JPG" loading="lazy"
-             alt="Headpiece a gabbia realizzato per editoriale Vogue Sposa">
+        <img src="Unga/GabbiaVogueSposa.JPG" loading="lazy" alt="Headpiece a gabbia realizzato per editoriale Vogue Sposa">
         <figcaption class="port-caption">
-          <div class="cap-title">Headpiece a gabbia</div>
-          <div class="cap-desc">Progetto Vogue Sposa con struttura a gabbia: volume leggero e impatto scenico.</div>
+          <div class="cap-title" data-i18n="port_3_title">Headpiece a gabbia</div>
+          <div class="cap-desc" data-i18n="port_3_desc">Progetto Vogue Sposa con struttura a gabbia: volume leggero e impatto scenico.</div>
         </figcaption>
       </figure>
 
       <figure class="port-item span-4 med reveal">
-        <img src="Unga/SpillaGioiello.JPG" loading="lazy"
-             alt="Spilla gioiello con perle e cristalli su base dorata, progettata come dettaglio statement per styling couture">
+        <img src="Unga/SpillaGioiello.JPG" loading="lazy" alt="Spilla gioiello con perle e cristalli su base dorata">
         <figcaption class="port-caption">
-          <div class="cap-title">Motivi barocchi</div>
-          <div class="cap-desc">Spilla con cristalli e perle: un accento prezioso dal gusto couture contemporaneo.</div>
+          <div class="cap-title" data-i18n="port_4_title">Motivi barocchi</div>
+          <div class="cap-desc" data-i18n="port_4_desc">Spilla con cristalli e perle: un accento prezioso dal gusto couture contemporaneo.</div>
         </figcaption>
       </figure>
 
       <figure class="port-item span-12 med reveal">
-        <img src="Unga/VogueSposaIkebana.JPG" loading="lazy"
-             alt="Editoriale Vogue Sposa Ikebana con accessori couture">
+        <img src="Unga/VogueSposaIkebana.JPG" loading="lazy" alt="Editoriale Vogue Sposa Ikebana con accessori couture">
         <figcaption class="port-caption">
-          <div class="cap-title">Vogue Sposa Ikebana</div>
-          <div class="cap-desc">Variante editoriale Ikebana: composizione materica e styling raffinato.</div>
+          <div class="cap-title" data-i18n="port_5_title">Vogue Sposa Ikebana</div>
+          <div class="cap-desc" data-i18n="port_5_desc">Variante editoriale Ikebana: composizione materica e styling raffinato.</div>
         </figcaption>
       </figure>
 
       <figure class="port-item span-6 med reveal">
-        <img src="Unga/GioielliPerle.JPG" loading="lazy"
-             alt="Composizione di gioielli con perle e dettagli dorati, progettata per editoriali e presentazione collezione">
+        <img src="Unga/GioielliPerle.JPG" loading="lazy" alt="Composizione di gioielli con perle e dettagli dorati">
         <figcaption class="port-caption">
-          <div class="cap-title">Perle &amp; cristalli</div>
-          <div class="cap-desc">Gioielli perle con accenti dorati: equilibrio tra romanticismo e impatto fotografico.</div>
+          <div class="cap-title" data-i18n="port_6_title">Perle &amp; cristalli</div>
+          <div class="cap-desc" data-i18n="port_6_desc">Gioielli perle con accenti dorati: equilibrio tra romanticismo e impatto fotografico.</div>
         </figcaption>
       </figure>
 
       <figure class="port-item span-6 med reveal">
-        <img src="Unga/SfilataDolceGabbana.JPG" loading="lazy"
-             alt="Look di sfilata Dolce & Gabbana con focus su accessori e acconciatura couture">
+        <img src="Unga/SfilataDolceGabbana.JPG" loading="lazy" alt="Look di sfilata Dolce & Gabbana con focus su accessori">
         <figcaption class="port-caption">
-          <div class="cap-title">Fashion styling</div>
-          <div class="cap-desc">Look di sfilata Dolce & Gabbana: styling accessori in dialogo con silhouette couture.</div>
+          <div class="cap-title" data-i18n="port_7_title">Fashion styling</div>
+          <div class="cap-desc" data-i18n="port_7_desc">Look di sfilata Dolce &amp; Gabbana: styling accessori in dialogo con silhouette couture.</div>
         </figcaption>
       </figure>
 
       <figure class="port-item span-6 med reveal">
-        <img src="Unga/VogueSposaAfrica.JPG" loading="lazy"
-             alt="Editoriale Vogue Sposa Africa con accessori e headpiece">
+        <img src="Unga/VogueSposaAfrica.JPG" loading="lazy" alt="Editoriale Vogue Sposa Africa con accessori e headpiece">
         <figcaption class="port-caption">
-          <div class="cap-title">Vogue Sposa Africa</div>
-          <div class="cap-desc">Variante editoriale Africa: accessori statement e costruzione visiva ad alto contrasto.</div>
+          <div class="cap-title" data-i18n="port_8_title">Vogue Sposa Africa</div>
+          <div class="cap-desc" data-i18n="port_8_desc">Variante editoriale Africa: accessori statement e costruzione visiva ad alto contrasto.</div>
         </figcaption>
       </figure>
 
       <figure class="port-item span-6 med reveal">
-        <img src="Unga/cerchiettoGioiello.JPG" loading="lazy"
-             alt="Cerchietto gioiello con finiture decorative per styling editoriale">
+        <img src="Unga/cerchiettoGioiello.JPG" loading="lazy" alt="Cerchietto gioiello con finiture decorative">
         <figcaption class="port-caption">
-          <div class="cap-title">Cerchietto gioiello</div>
-          <div class="cap-desc">Versione dettagliata del cerchietto gioiello con finiture decorative e resa fotografica.</div>
+          <div class="cap-title" data-i18n="port_9_title">Cerchietto gioiello</div>
+          <div class="cap-desc" data-i18n="port_9_desc">Versione dettagliata del cerchietto gioiello con finiture decorative e resa fotografica.</div>
         </figcaption>
       </figure>
 
       <figure class="port-item span-12 med reveal">
-        <img src="Unga/gioielliZar.JPG" loading="lazy"
-             alt="Composizione di gioielli metallici e accessori in styling editoriale">
+        <img src="Unga/gioielliZar.JPG" loading="lazy" alt="Composizione di gioielli metallici">
         <figcaption class="port-caption">
-          <div class="cap-title">Composizione gioielli</div>
-          <div class="cap-desc">Selezione di gioielli metallici con layering e accenti luminosi per presentazione collezione.</div>
+          <div class="cap-title" data-i18n="port_10_title">Composizione gioielli</div>
+          <div class="cap-desc" data-i18n="port_10_desc">Selezione di gioielli metallici con layering e accenti luminosi per presentazione collezione.</div>
         </figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- ESPERIENZE -->
   <section class="section" id="esperienze" aria-label="Esperienze professionali di Lucio Benenati">
-    <p class="sec-tag reveal">Esperienza</p>
-    <h2 class="sec-title reveal">Percorso<br><em>Professionale</em></h2>
+    <p class="sec-tag reveal" data-i18n="sec_tag_exp">Esperienza</p>
+    <h2 class="sec-title reveal" data-i18n="sec_title_exp">Percorso<br><em>Professionale</em></h2>
 
     <div class="exp-wrapper">
       <article class="exp-card reveal">
-        <p class="exp-role-tag">Special Projects · R&amp;D</p>
-        <h3>Design e sviluppo per progetti ad alto impatto</h3>
-        <p>Ideazione, prototipazione e supervisione del processo creativo: ricerca materiali, sviluppo campionari e controllo qualità, con attenzione a coerenza estetica e identità del progetto.</p>
+        <p class="exp-role-tag" data-i18n="exp_1_tag">Special Projects · R&amp;D</p>
+        <h3 data-i18n="exp_1_title">Design e sviluppo per progetti ad alto impatto</h3>
+        <p data-i18n="exp_1_desc">Ideazione, prototipazione e supervisione del processo creativo: ricerca materiali, sviluppo campionari e controllo qualità, con attenzione a coerenza estetica e identità del progetto.</p>
       </article>
 
       <article class="exp-card reveal">
-        <p class="exp-role-tag">Haute couture · Artigianato Made in Italy</p>
-        <h3>Lavorazioni sartoriali e dettagli decorativi</h3>
-        <p>Realizzazione e coordinamento di lavorazioni decorative e finiture, con focus su resa editoriale e precisione artigianale.</p>
+        <p class="exp-role-tag" data-i18n="exp_2_tag">Haute couture · Artigianato Made in Italy</p>
+        <h3 data-i18n="exp_2_title">Lavorazioni sartoriali e dettagli decorativi</h3>
+        <p data-i18n="exp_2_desc">Realizzazione e coordinamento di lavorazioni decorative e finiture, con focus su resa editoriale e precisione artigianale.</p>
       </article>
 
       <article class="exp-card reveal">
-        <p class="exp-role-tag">Fashion styling</p>
-        <h3>Supporto creativo per set editoriali</h3>
-        <p>Consulenza creativa per la produzione di accessori e pezzi unici destinati a shooting fotografici e storytelling visivo.</p>
+        <p class="exp-role-tag" data-i18n="exp_3_tag">Fashion styling</p>
+        <h3 data-i18n="exp_3_title">Supporto creativo per set editoriali</h3>
+        <p data-i18n="exp_3_desc">Consulenza creativa per la produzione di accessori e pezzi unici destinati a shooting fotografici e storytelling visivo.</p>
       </article>
 
       <article class="exp-card reveal">
-        <p class="exp-role-tag">Produzione &amp; qualità</p>
-        <h3>Dal concept alla realizzazione</h3>
-        <p>Gestione del flusso dall’idea al risultato finale: fornitori, campionatura, rifiniture e qualità, con un approccio pratico e orientato al risultato.</p>
+        <p class="exp-role-tag" data-i18n="exp_4_tag">Produzione &amp; qualità</p>
+        <h3 data-i18n="exp_4_title">Dal concept alla realizzazione</h3>
+        <p data-i18n="exp_4_desc">Gestione del flusso dall’idea al risultato finale: fornitori, campionatura, rifiniture e qualità, con un approccio pratico e orientato al risultato.</p>
       </article>
     </div>
   </section>
 
-  <!-- MANIFESTO -->
   <section class="section" id="manifesto" aria-label="Manifesto creativo Lucio Benenati">
     <div class="gold-line"></div>
-    <blockquote class="manifesto-q reveal">
+    <blockquote class="manifesto-q reveal" data-i18n="manifesto_q">
       "Il lusso non è una parola: è <span>artigianato Made in Italy</span>, ricerca materica e <span>lavorazioni sartoriali</span>.
       Il mio obiettivo è creare pezzi che funzionano dal vivo e in camera: forti, coerenti, memorabili."
     </blockquote>
     <div class="gold-line"></div>
-    <p class="manifesto-attr reveal">— Lucio Benenati · Fashion Designer</p>
+    <p class="manifesto-attr reveal" data-i18n="manifesto_attr">— Lucio Benenati · Fashion Designer</p>
   </section>
 
-  <!-- CONTATTI -->
   <section class="section" id="contatti" aria-label="Contatti Lucio Benenati">
-    <p class="sec-tag reveal">Contatti</p>
-    <h2 class="sec-title reveal">Collaboriamo<br><em>Insieme</em></h2>
+    <p class="sec-tag reveal" data-i18n="sec_tag_contact">Contatti</p>
+    <h2 class="sec-title reveal" data-i18n="sec_title_contact">Collaboriamo<br><em>Insieme</em></h2>
 
     <div class="contact-grid">
       <div class="contact-left reveal">
-        <h3>Disponibile per collaborazioni e progetti speciali</h3>
-        <p>Per proposte professionali, special projects, consulenze creative e richieste stampa/editoriali.</p>
+        <h3 data-i18n="contact_h3">Disponibile per collaborazioni e progetti speciali</h3>
+        <p data-i18n="contact_p">Per proposte professionali, special projects, consulenze creative e richieste stampa/editoriali.</p>
 
         <div class="contact-links">
           <a href="https://www.linkedin.com/in/luciobenenati" target="_blank" rel="noopener noreferrer" class="contact-link-item">
@@ -477,7 +473,7 @@
 
           <a href="tel:+393283745523" class="contact-link-item">
             <div class="cli-left">
-              <span class="cli-label">Telefono</span>
+              <span class="cli-label" data-i18n="contact_label_phone">Telefono</span>
               <span class="cli-value">+39 328 374 5523</span>
             </div>
             <span class="cli-arrow">→</span>
@@ -487,22 +483,21 @@
 
       <div class="reveal">
         <ul class="expertise-ul" aria-label="Aree di competenza">
-          <li>Haute couture <span>✦</span></li>
-          <li>Artigianato Made in Italy <span>✦</span></li>
-          <li>Lavorazioni sartoriali <span>✦</span></li>
-          <li>Special projects <span>✦</span></li>
-          <li>Research &amp; Development <span>✦</span></li>
-          <li>Fashion styling <span>✦</span></li>
-          <li>Design di monili <span>✦</span></li>
-          <li>Prototipazione &amp; qualità <span>✦</span></li>
+          <li><span data-i18n="exp_list_1">Haute couture</span> <span class="icon">✦</span></li>
+          <li><span data-i18n="exp_list_2">Artigianato Made in Italy</span> <span class="icon">✦</span></li>
+          <li><span data-i18n="exp_list_3">Lavorazioni sartoriali</span> <span class="icon">✦</span></li>
+          <li><span data-i18n="exp_list_4">Special projects</span> <span class="icon">✦</span></li>
+          <li><span data-i18n="exp_list_5">Research &amp; Development</span> <span class="icon">✦</span></li>
+          <li><span data-i18n="exp_list_6">Fashion styling</span> <span class="icon">✦</span></li>
+          <li><span data-i18n="exp_list_7">Design di monili</span> <span class="icon">✦</span></li>
+          <li><span data-i18n="exp_list_8">Prototipazione &amp; qualità</span> <span class="icon">✦</span></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p class="footer-copy">© 2026 Lucio Benenati — Fashion Designer</p>
+    <p class="footer-copy" data-i18n="footer_copy">© 2026 Lucio Benenati — Fashion Designer</p>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/luciobenenati" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn ↗</a>
       <a href="https://www.instagram.com/luciobenenati" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram ↗</a>
@@ -511,13 +506,123 @@
   </footer>
 
   <script>
-    // Nav scroll
+    // --- TRANSLATION DICTIONARY ---
+    const translations = {
+      it: {
+        nav_skills: "Competenze", nav_portfolio: "Portfolio", nav_exp: "Esperienze", nav_manifesto: "Manifesto", nav_contact: "Contatti",
+        hero_eyebrow: "Fashion Designer · Special Projects · R&amp;D",
+        hero_tagline: "Fashion Designer di accessori &amp; headpiece couture",
+        hero_desc: "Fashion Designer creativo specializzato nella progettazione di <strong>accessori</strong> e <strong>headpiece</strong>. Lavoro tra <strong>haute couture</strong>, artigianato <strong>Made in Italy</strong> e <strong>lavorazioni sartoriali</strong>, con focus su special projects, ricerca materiali e sviluppo di pezzi ad alto impatto visivo.",
+        btn_portfolio: "Vedi Portfolio", btn_contact: "Contatti",
+        dg_label: "Focus", dg_brand: "Design &amp;<br>Sviluppo",
+        dg_li_1: "Special projects · Research &amp; Development", dg_li_2: "Haute couture e artigianato Made in Italy", dg_li_3: "Ricerca materiali, prototipi, campionari", dg_li_4: "Coordinamento creativo e controllo qualità",
+        stat_1: "Anni esperienza", stat_2: "Follower", stat_3: "Collegamenti",
+        sec_tag_skills: "Expertise", sec_title_skills: "Il mio<br><em>Savoir-Faire</em>",
+        skill_1_title: "Design Accessori Lusso", skill_1_desc: "Progettazione di accessori esclusivi con attenzione al dettaglio estetico, proporzioni e resa fotografica in contesto couture.",
+        skill_2_title: "Headpiece Couture", skill_2_desc: "Creazione di headpiece scenografici e raffinati per sfilate, editoriali e progetti speciali, con ricerca di forme e materiali.",
+        skill_3_title: "Design di Monili", skill_3_desc: "Sviluppo di gioielli e componenti decorativi, equilibrio tra luce, volumi, finiture e identità visiva.",
+        skill_4_title: "Ricerca &amp; Materiali", skill_4_desc: "Selezione e sviluppo materiali pregiati, studio cromatico, fattibilità produttiva e coerenza con il concept.",
+        skill_5_title: "Special Projects", skill_5_desc: "Progetti speciali ad alto contenuto creativo, prototipazione e supervisione dei campionari con standard di qualità elevati.",
+        skill_6_title: "Fashion Styling", skill_6_desc: "Supporto creativo per set editoriali: costruzione di look, accessori e dettagli per storytelling visivo coerente e memorabile.",
+        sec_tag_port: "Portfolio", sec_title_port: "Progetti<br><em>Selezionati</em>",
+        port_1_title: "Editoriale Vogue Sposa", port_1_desc: "Scatto editoriale Vogue Sposa con focus su accessori couture e ricerca stilistica.",
+        port_2_title: "Design di monili", port_2_desc: "Composizione luminosa con pietra statement e catena dorata.",
+        port_3_title: "Headpiece a gabbia", port_3_desc: "Progetto Vogue Sposa con struttura a gabbia: volume leggero e impatto scenico.",
+        port_4_title: "Motivi barocchi", port_4_desc: "Spilla con cristalli e perle: un accento prezioso dal gusto couture contemporaneo.",
+        port_5_title: "Vogue Sposa Ikebana", port_5_desc: "Variante editoriale Ikebana: composizione materica e styling raffinato.",
+        port_6_title: "Perle &amp; cristalli", port_6_desc: "Gioielli perle con accenti dorati: equilibrio tra romanticismo e impatto fotografico.",
+        port_7_title: "Fashion styling", port_7_desc: "Look di sfilata Dolce &amp; Gabbana: styling accessori in dialogo con silhouette couture.",
+        port_8_title: "Vogue Sposa Africa", port_8_desc: "Variante editoriale Africa: accessori statement e costruzione visiva ad alto contrasto.",
+        port_9_title: "Cerchietto gioiello", port_9_desc: "Versione dettagliata del cerchietto gioiello con finiture decorative e resa fotografica.",
+        port_10_title: "Composizione gioielli", port_10_desc: "Selezione di gioielli metallici con layering e accenti luminosi per presentazione collezione.",
+        sec_tag_exp: "Esperienza", sec_title_exp: "Percorso<br><em>Professionale</em>",
+        exp_1_tag: "Special Projects · R&amp;D", exp_1_title: "Design e sviluppo per progetti ad alto impatto", exp_1_desc: "Ideazione, prototipazione e supervisione del processo creativo: ricerca materiali, sviluppo campionari e controllo qualità, con attenzione a coerenza estetica e identità del progetto.",
+        exp_2_tag: "Haute couture · Artigianato Made in Italy", exp_2_title: "Lavorazioni sartoriali e dettagli decorativi", exp_2_desc: "Realizzazione e coordinamento di lavorazioni decorative e finiture, con focus su resa editoriale e precisione artigianale.",
+        exp_3_tag: "Fashion styling", exp_3_title: "Supporto creativo per set editoriali", exp_3_desc: "Consulenza creativa per la produzione di accessori e pezzi unici destinati a shooting fotografici e storytelling visivo.",
+        exp_4_tag: "Produzione &amp; qualità", exp_4_title: "Dal concept alla realizzazione", exp_4_desc: "Gestione del flusso dall’idea al risultato finale: fornitori, campionatura, rifiniture e qualità, con un approccio pratico e orientato al risultato.",
+        manifesto_q: "\"Il lusso non è una parola: è <span>artigianato Made in Italy</span>, ricerca materica e <span>lavorazioni sartoriali</span>. Il mio obiettivo è creare pezzi che funzionano dal vivo e in camera: forti, coerenti, memorabili.\"",
+        manifesto_attr: "— Lucio Benenati · Fashion Designer",
+        sec_tag_contact: "Contatti", sec_title_contact: "Collaboriamo<br><em>Insieme</em>",
+        contact_h3: "Disponibile per collaborazioni e progetti speciali", contact_p: "Per proposte professionali, special projects, consulenze creative e richieste stampa/editoriali.",
+        contact_label_phone: "Telefono",
+        exp_list_1: "Haute couture", exp_list_2: "Artigianato Made in Italy", exp_list_3: "Lavorazioni sartoriali", exp_list_4: "Special projects", exp_list_5: "Research &amp; Development", exp_list_6: "Fashion styling", exp_list_7: "Design di monili", exp_list_8: "Prototipazione &amp; qualità",
+        footer_copy: "© 2026 Lucio Benenati — Fashion Designer"
+      },
+      en: {
+        nav_skills: "Expertise", nav_portfolio: "Portfolio", nav_exp: "Experience", nav_manifesto: "Manifesto", nav_contact: "Contact",
+        hero_eyebrow: "Fashion Designer · Special Projects · R&amp;D",
+        hero_tagline: "Couture accessories &amp; headpiece Fashion Designer",
+        hero_desc: "Creative Fashion Designer specializing in <strong>accessories</strong> and <strong>headpieces</strong>. Working across <strong>haute couture</strong>, <strong>Made in Italy</strong> craftsmanship, and <strong>sartorial techniques</strong>, focusing on special projects, materials research, and developing high-visual-impact pieces.",
+        btn_portfolio: "View Portfolio", btn_contact: "Contact",
+        dg_label: "Focus", dg_brand: "Design &amp;<br>Development",
+        dg_li_1: "Special projects · Research &amp; Development", dg_li_2: "Haute couture &amp; Made in Italy craftsmanship", dg_li_3: "Materials research, prototypes, sampling", dg_li_4: "Creative coordination &amp; quality control",
+        stat_1: "Years experience", stat_2: "Followers", stat_3: "Connections",
+        sec_tag_skills: "Expertise", sec_title_skills: "My<br><em>Savoir-Faire</em>",
+        skill_1_title: "Luxury Accessories Design", skill_1_desc: "Designing exclusive accessories with attention to aesthetic details, proportions, and photographic rendering in a couture context.",
+        skill_2_title: "Couture Headpieces", skill_2_desc: "Creating scenographic and refined headpieces for fashion shows, editorials, and special projects, researching shapes and materials.",
+        skill_3_title: "Jewelry Design", skill_3_desc: "Developing jewelry and decorative components, balancing light, volumes, finishes, and visual identity.",
+        skill_4_title: "Research &amp; Materials", skill_4_desc: "Selecting and developing premium materials, color studies, production feasibility, and concept coherence.",
+        skill_5_title: "Special Projects", skill_5_desc: "High-creative-content special projects, prototyping, and sample supervision with high-quality standards.",
+        skill_6_title: "Fashion Styling", skill_6_desc: "Creative support for editorial sets: building looks, accessories, and details for a coherent and memorable visual storytelling.",
+        sec_tag_port: "Portfolio", sec_title_port: "Selected<br><em>Projects</em>",
+        port_1_title: "Vogue Sposa Editorial", port_1_desc: "Vogue Sposa editorial shot focusing on couture accessories and stylistic research.",
+        port_2_title: "Jewelry Design", port_2_desc: "Luminous composition featuring a statement stone and golden chain.",
+        port_3_title: "Cage Headpiece", port_3_desc: "Vogue Sposa project featuring a cage structure: lightweight volume with scenic impact.",
+        port_4_title: "Baroque Motifs", port_4_desc: "Brooch with crystals and pearls: a precious accent with a contemporary couture flair.",
+        port_5_title: "Vogue Sposa Ikebana", port_5_desc: "Ikebana editorial variant: textural composition and refined styling.",
+        port_6_title: "Pearls &amp; Crystals", port_6_desc: "Pearl jewelry with golden accents: striking a balance between romance and photographic impact.",
+        port_7_title: "Fashion Styling", port_7_desc: "Dolce &amp; Gabbana runway look: accessory styling conversing with couture silhouettes.",
+        port_8_title: "Vogue Sposa Africa", port_8_desc: "Africa editorial variant: statement accessories and high-contrast visual construction.",
+        port_9_title: "Jeweled Headband", port_9_desc: "Detailed version of a jeweled headband with decorative finishes and photographic rendering.",
+        port_10_title: "Jewelry Composition", port_10_desc: "Selection of metallic jewelry with layering and luminous accents for collection presentation.",
+        sec_tag_exp: "Experience", sec_title_exp: "Professional<br><em>Journey</em>",
+        exp_1_tag: "Special Projects · R&amp;D", exp_1_title: "Design and development for high-impact projects", exp_1_desc: "Ideation, prototyping, and supervision of the creative process: materials research, sample development, and quality control, ensuring aesthetic coherence and project identity.",
+        exp_2_tag: "Haute couture · Made in Italy craftsmanship", exp_2_title: "Sartorial techniques and decorative details", exp_2_desc: "Creation and coordination of decorative processes and finishes, focusing on editorial rendering and artisanal precision.",
+        exp_3_tag: "Fashion styling", exp_3_title: "Creative support for editorial sets", exp_3_desc: "Creative consulting for the production of accessories and unique pieces intended for photoshoots and visual storytelling.",
+        exp_4_tag: "Production &amp; quality", exp_4_title: "From concept to creation", exp_4_desc: "Managing the workflow from idea to final result: suppliers, sampling, finishing, and quality, with a practical, results-oriented approach.",
+        manifesto_q: "\"Luxury is not just a word: it is <span>Made in Italy craftsmanship</span>, material research, and <span>sartorial techniques</span>. My goal is to create pieces that work both in person and on camera: strong, coherent, memorable.\"",
+        manifesto_attr: "— Lucio Benenati · Fashion Designer",
+        sec_tag_contact: "Contact", sec_title_contact: "Let's<br><em>Collaborate</em>",
+        contact_h3: "Available for collaborations and special projects", contact_p: "For professional proposals, special projects, creative consulting, and press/editorial requests.",
+        contact_label_phone: "Phone",
+        exp_list_1: "Haute couture", exp_list_2: "Made in Italy craftsmanship", exp_list_3: "Sartorial techniques", exp_list_4: "Special projects", exp_list_5: "Research &amp; Development", exp_list_6: "Fashion styling", exp_list_7: "Jewelry design", exp_list_8: "Prototyping &amp; quality",
+        footer_copy: "© 2026 Lucio Benenati — Fashion Designer"
+      }
+    };
+
+    // --- LANGUAGE SWITCHER LOGIC ---
+    function setLang(lang) {
+      // Aggiorna l'HTML lang
+      document.documentElement.lang = lang;
+      
+      // Aggiorna testi
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      // Aggiorna classi bottoni
+      document.getElementById('lang-it').classList.toggle('active', lang === 'it');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      
+      // Salva la preferenza (opzionale)
+      localStorage.setItem('preferredLang', lang);
+    }
+
+    // Controlla preferenza salvata all'avvio
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLang') || 'it';
+      setLang(savedLang);
+    });
+
+    // --- UI LOGIC ---
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // Scroll reveal
     const revealEls = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
@@ -529,7 +634,6 @@
     }, { threshold: 0.08 });
     revealEls.forEach(el => obs.observe(el));
 
-    // Smooth scroll interni
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const id = a.getAttribute('href');
