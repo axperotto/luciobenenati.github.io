@@ -4,6 +4,7 @@ Sito portfolio statico di **Lucio Benenati**.
 
 ## Struttura
 - `index.html`: pagina principale con presentazione, portfolio, esperienze e contatti.
+- `en/index.html`: versione inglese dedicata per indicizzazione SEO internazionale.
 - `Unga/`: archivio immagini usate nella sezione portfolio.
 
 ## Documentazione cartelle

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Host: www.luciobenenati.com
 
 Sitemap: https://www.luciobenenati.com/sitemap.xml
