@@ -11,6 +11,8 @@
       var loading = item.eager ? 'eager' : 'lazy';
       var fetchAttr = item.eager ? ' fetchpriority="high"' : '';
       var alt = (lang === 'en' && item.altEn) ? item.altEn : item.alt;
+      var title = lang === 'en' ? (item.titleEn || item.title) : item.title;
+      var desc = lang === 'en' ? (item.descEn || item.desc) : item.desc;
 
       var sourceTag = '';
       if (item.srcWebp) {
@@ -30,21 +32,13 @@
             '" alt="' + alt + '">' +
         '</picture>' +
         '<figcaption class="port-caption">' +
-          '<div class="cap-title" data-i18n="' + item.titleKey + '"></div>' +
-          '<div class="cap-desc" data-i18n="' + item.descKey + '"></div>' +
+          '<div class="cap-title">' + title + '</div>' +
+          '<div class="cap-desc">' + desc + '</div>' +
         '</figcaption>' +
       '</figure>';
     }).join('');
 
     grid.innerHTML = html;
-
-    // Re-apply the current language to newly created [data-i18n] elements.
-    // setLang() is defined in the page's inline <script> and runs in the same
-    // global scope; by the time this async fetch callback fires, it is
-    // guaranteed to be available.
-    if (typeof setLang === 'function') {
-      setLang(lang);
-    }
 
     // Observe new reveal elements for scroll animation, staggering items that
     // enter the viewport at the same time by 80 ms each.
