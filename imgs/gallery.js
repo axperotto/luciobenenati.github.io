@@ -14,15 +14,8 @@
       var title = lang === 'en' ? (item.titleEn || item.title) : item.title;
       var desc = lang === 'en' ? (item.descEn || item.desc) : item.desc;
 
-      var sourceTag = '';
-      if (item.srcWebp) {
-        if (item.srcWebpSmall) {
-          sourceTag = '<source srcset="' + item.srcWebpSmall + ' 640w, ' + item.srcWebp +
-            ' ' + item.width + 'w" sizes="(max-width: 860px) 100vw, 50vw" type="image/webp">';
-        } else {
-          sourceTag = '<source srcset="' + item.srcWebp + '" type="image/webp">';
-        }
-      }
+      var srcWebp = /\.[^./]+$/.test(item.src) ? item.src.replace(/\.[^.]+$/, '.webp') : '';
+      var sourceTag = srcWebp ? '<source srcset="' + srcWebp + '" type="image/webp">' : '';
 
       return '<figure class="port-item ' + item.span + ' ' + item.size + ' reveal">' +
         '<picture>' +
