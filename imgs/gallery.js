@@ -1,0 +1,72 @@
+(function () {
+  'use strict';
+
+  function renderGallery(items) {
+    var grid = document.getElementById('portfolio-grid');
+    if (!grid) return;
+
+    var lang = document.documentElement.lang || 'it';
+
+    var html = items.map(function (item) {
+      var loading = item.eager ? 'eager' : 'lazy';
+      var fetchAttr = item.eager ? ' fetchpriority="high"' : '';
+      var alt = (lang === 'en' && item.altEn) ? item.altEn : item.alt;
+
+      var sourceTag = '';
+      if (item.srcWebp) {
+        if (item.srcWebpSmall) {
+          sourceTag = '<source srcset="' + item.srcWebpSmall + ' 640w, ' + item.srcWebp +
+            ' ' + item.width + 'w" sizes="(max-width: 860px) 100vw, 50vw" type="image/webp">';
+        } else {
+          sourceTag = '<source srcset="' + item.srcWebp + '" type="image/webp">';
+        }
+      }
+
+      return '<figure class="port-item ' + item.span + ' ' + item.size + ' reveal">' +
+        '<picture>' +
+          sourceTag +
+          '<img src="' + item.src + '" loading="' + loading + '"' + fetchAttr +
+            ' decoding="async" width="' + item.width + '" height="' + item.height +
+            '" alt="' + alt + '">' +
+        '</picture>' +
+        '<figcaption class="port-caption">' +
+          '<div class="cap-title" data-i18n="' + item.titleKey + '"></div>' +
+          '<div class="cap-desc" data-i18n="' + item.descKey + '"></div>' +
+        '</figcaption>' +
+      '</figure>';
+    }).join('');
+
+    grid.innerHTML = html;
+
+    // Re-apply the current language to newly created [data-i18n] elements.
+    // setLang() is defined in the page's inline <script> and runs in the same
+    // global scope; by the time this async fetch callback fires, it is
+    // guaranteed to be available.
+    if (typeof setLang === 'function') {
+      setLang(lang);
+    }
+
+    // Observe new reveal elements for scroll animation, staggering items that
+    // enter the viewport at the same time by 80 ms each.
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          setTimeout(function () { entry.target.classList.add('visible'); }, i * 80);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    grid.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
+  }
+
+  // Absolute path works from both / (IT) and /en/ (EN) pages, while a relative
+  // path would resolve differently depending on the page's directory depth.
+  fetch('/imgs/gallery.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('Gallery fetch failed: ' + res.status);
+      return res.json();
+    })
+    .then(renderGallery)
+    .catch(function (err) { console.error(err); });
+}());
