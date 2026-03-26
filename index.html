@@ -82,7 +82,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="Unga/VogueSposa.webp" imagesrcset="Unga/VogueSposa-640.webp 640w, Unga/VogueSposa.webp 1066w" imagesizes="(max-width: 860px) 100vw, 50vw" type="image/webp">
+  <link rel="preload" as="image" href="/imgs/VogueSposa.webp" imagesrcset="/imgs/VogueSposa-640.webp 640w, /imgs/VogueSposa.webp 1066w" imagesizes="(max-width: 860px) 100vw, 50vw" type="image/webp">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -164,6 +164,7 @@
     .portfolio-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;}
     figure{margin:0;}
     .port-item{position:relative;border:1px solid rgba(201,168,76,.14);overflow:hidden;background:linear-gradient(160deg,rgba(201,168,76,.06),transparent 60%);}
+    .port-item picture{display:block;width:100%;height:100%;}
     .port-item img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform .55s ease,opacity .55s ease;opacity:.95;}
     .port-item:hover img{transform:scale(1.06);opacity:1;}
     .port-caption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(to top,rgba(13,13,13,.88),rgba(13,13,13,0));border-top:1px solid rgba(201,168,76,.10);transition:transform .35s ease;}
@@ -173,9 +174,9 @@
     .span-4{grid-column:span 4;}
     .span-8{grid-column:span 8;}
     .span-12{grid-column:span 12;}
-    .tall{min-height:520px;}
-    .med{min-height:420px;}
-    .small{min-height:320px;}
+    .tall{height:520px;}
+    .med{height:420px;}
+    .small{height:320px;}
 
     /* ESPERIENZE */
     .exp-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,.09);}
@@ -239,7 +240,7 @@
       footer{flex-direction:column;align-items:flex-start;gap:12px;padding:32px 28px;}
       .portfolio-grid{grid-template-columns:repeat(6,1fr);}
       .span-12,.span-8,.span-6,.span-4{grid-column:span 6;}
-      .tall,.med,.small{min-height:320px;}
+      .tall,.med,.small{height:320px;}
     }
   </style>
 </head>
@@ -356,116 +357,7 @@
     <p class="sec-tag reveal" data-i18n="sec_tag_port">Portfolio</p>
     <h2 class="sec-title reveal" data-i18n="sec_title_port">Progetti<br><em>Selezionati</em></h2>
 
-    <div class="portfolio-grid">
-      <figure class="port-item span-6 tall reveal">
-        <picture>
-          <source srcset="Unga/VogueSposa-640.webp 640w, Unga/VogueSposa.webp 1066w" sizes="(max-width: 860px) 100vw, 50vw" type="image/webp">
-          <img src="Unga/VogueSposa.JPG" loading="eager" fetchpriority="high" decoding="async" width="1066" height="1600" alt="Scatto editoriale Vogue Sposa con headpiece couture e styling accessori">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_1_title">Editoriale Vogue Sposa</div>
-          <div class="cap-desc" data-i18n="port_1_desc">Scatto editoriale Vogue Sposa con focus su accessori couture e ricerca stilistica.</div>
-        </figcaption>
-      </figure>
-
-      <figure class="port-item span-6 tall reveal">
-        <picture>
-          <source srcset="Unga/BraccialeStrass-640.webp 640w, Unga/BraccialeStrass.webp 1200w" sizes="(max-width: 860px) 100vw, 50vw" type="image/webp">
-          <img src="Unga/BraccialeStrass.JPG" loading="lazy" decoding="async" width="1200" height="1600" alt="Bracciale gioiello con pietre taglio marquise, styling editoriale haute couture">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_2_title">Design di monili</div>
-          <div class="cap-desc" data-i18n="port_2_desc">Composizione luminosa con pietra statement e catena dorata.</div>
-        </figcaption>
-      </figure>
-
-      <figure class="port-item span-8 med reveal">
-        <picture>
-          <source srcset="Unga/GabbiaVogueSposa.webp" type="image/webp">
-          <img src="Unga/GabbiaVogueSposa.JPG" loading="lazy" decoding="async" width="360" height="480" alt="Headpiece a gabbia realizzato per editoriale Vogue Sposa">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_3_title">Headpiece a gabbia</div>
-          <div class="cap-desc" data-i18n="port_3_desc">Progetto Vogue Sposa con struttura a gabbia: volume leggero e impatto scenico.</div>
-        </figcaption>
-      </figure>
-
-      <figure class="port-item span-4 med reveal">
-        <picture>
-          <source srcset="Unga/SpillaGioiello-640.webp 640w, Unga/SpillaGioiello.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" type="image/webp">
-          <img src="Unga/SpillaGioiello.JPG" loading="lazy" decoding="async" width="1600" height="1200" alt="Spilla gioiello con perle e cristalli su base dorata">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_4_title">Motivi barocchi</div>
-          <div class="cap-desc" data-i18n="port_4_desc">Spilla con cristalli e perle: un accento prezioso dal gusto couture contemporaneo.</div>
-        </figcaption>
-      </figure>
-
-      <figure class="port-item span-12 med reveal">
-        <picture>
-          <source srcset="Unga/VogueSposaIkebana.webp" type="image/webp">
-          <img src="Unga/VogueSposaIkebana.JPG" loading="lazy" decoding="async" width="348" height="480" alt="Editoriale Vogue Sposa Ikebana con accessori couture">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_5_title">Vogue Sposa Ikebana</div>
-          <div class="cap-desc" data-i18n="port_5_desc">Variante editoriale Ikebana: composizione materica e styling raffinato.</div>
-        </figcaption>
-      </figure>
-
-      <figure class="port-item span-6 med reveal">
-        <picture>
-          <source srcset="Unga/GioielliPerle-640.webp 640w, Unga/GioielliPerle.webp 1200w" sizes="(max-width: 860px) 100vw, 50vw" type="image/webp">
-          <img src="Unga/GioielliPerle.JPG" loading="lazy" decoding="async" width="1200" height="1600" alt="Composizione di gioielli con perle e dettagli dorati">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_6_title">Perle &amp; cristalli</div>
-          <div class="cap-desc" data-i18n="port_6_desc">Gioielli perle con accenti dorati: equilibrio tra romanticismo e impatto fotografico.</div>
-        </figcaption>
-      </figure>
-
-      <figure class="port-item span-6 med reveal">
-        <picture>
-          <source srcset="Unga/SfilataDolceGabbana.webp" type="image/webp">
-          <img src="Unga/SfilataDolceGabbana.JPG" loading="lazy" decoding="async" width="640" height="960" alt="Look di sfilata Dolce & Gabbana con focus su accessori">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_7_title">Fashion styling</div>
-          <div class="cap-desc" data-i18n="port_7_desc">Look di sfilata Dolce &amp; Gabbana: styling accessori in dialogo con silhouette couture.</div>
-        </figcaption>
-      </figure>
-
-      <figure class="port-item span-6 med reveal">
-        <picture>
-          <source srcset="Unga/VogueSposaAfrica.webp" type="image/webp">
-          <img src="Unga/VogueSposaAfrica.JPG" loading="lazy" decoding="async" width="364" height="480" alt="Editoriale Vogue Sposa Africa con accessori e headpiece">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_8_title">Vogue Sposa Africa</div>
-          <div class="cap-desc" data-i18n="port_8_desc">Variante editoriale Africa: accessori statement e costruzione visiva ad alto contrasto.</div>
-        </figcaption>
-      </figure>
-
-      <figure class="port-item span-6 med reveal">
-        <picture>
-          <source srcset="Unga/cerchiettoGioiello-640.webp 640w, Unga/cerchiettoGioiello.webp 900w" sizes="(max-width: 860px) 100vw, 50vw" type="image/webp">
-          <img src="Unga/cerchiettoGioiello.JPG" loading="lazy" decoding="async" width="900" height="1600" alt="Cerchietto gioiello con finiture decorative">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_9_title">Cerchietto gioiello</div>
-          <div class="cap-desc" data-i18n="port_9_desc">Versione dettagliata del cerchietto gioiello con finiture decorative e resa fotografica.</div>
-        </figcaption>
-      </figure>
-
-      <figure class="port-item span-12 med reveal">
-        <picture>
-          <source srcset="Unga/gioielliZar-640.webp 640w, Unga/gioielliZar.webp 1200w" sizes="(max-width: 860px) 100vw, 50vw" type="image/webp">
-          <img src="Unga/gioielliZar.JPG" loading="lazy" decoding="async" width="1200" height="1600" alt="Composizione di gioielli metallici">
-        </picture>
-        <figcaption class="port-caption">
-          <div class="cap-title" data-i18n="port_10_title">Composizione gioielli</div>
-          <div class="cap-desc" data-i18n="port_10_desc">Selezione di gioielli metallici con layering e accenti luminosi per presentazione collezione.</div>
-        </figcaption>
-      </figure>
+    <div class="portfolio-grid" id="gallery-grid">
     </div>
   </section>
 
@@ -721,6 +613,7 @@
       });
     });
   </script>
+  <script src="/gallery.js" defer></script>
 
 </body>
 </html>
