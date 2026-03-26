@@ -1,8 +1,6 @@
 [
   {
     "src": "/imgs/VogueSposa.JPG",
-    "srcWebp": "/imgs/VogueSposa.webp",
-    "srcWebpSmall": "/imgs/VogueSposa-640.webp",
     "width": 1066,
     "height": 1600,
     "alt": "Scatto editoriale Vogue Sposa con headpiece couture e styling accessori",
@@ -17,8 +15,6 @@
   },
   {
     "src": "/imgs/BraccialeStrass.JPG",
-    "srcWebp": "/imgs/BraccialeStrass.webp",
-    "srcWebpSmall": "/imgs/BraccialeStrass-640.webp",
     "width": 1200,
     "height": 1600,
     "alt": "Bracciale gioiello con pietre taglio marquise, styling editoriale haute couture",
@@ -33,8 +29,6 @@
   },
   {
     "src": "/imgs/GabbiaVogueSposa.JPG",
-    "srcWebp": "/imgs/GabbiaVogueSposa.webp",
-    "srcWebpSmall": "",
     "width": 360,
     "height": 480,
     "alt": "Headpiece a gabbia realizzato per editoriale Vogue Sposa",
@@ -49,8 +43,6 @@
   },
   {
     "src": "/imgs/SpillaGioiello.JPG",
-    "srcWebp": "/imgs/SpillaGioiello.webp",
-    "srcWebpSmall": "/imgs/SpillaGioiello-640.webp",
     "width": 1600,
     "height": 1200,
     "alt": "Spilla gioiello con perle e cristalli su base dorata",
@@ -65,8 +57,6 @@
   },
   {
     "src": "/imgs/VogueSposaIkebana.JPG",
-    "srcWebp": "/imgs/VogueSposaIkebana.webp",
-    "srcWebpSmall": "",
     "width": 348,
     "height": 480,
     "alt": "Editoriale Vogue Sposa Ikebana con accessori couture",
@@ -81,8 +71,6 @@
   },
   {
     "src": "/imgs/GioielliPerle.JPG",
-    "srcWebp": "/imgs/GioielliPerle.webp",
-    "srcWebpSmall": "/imgs/GioielliPerle-640.webp",
     "width": 1200,
     "height": 1600,
     "alt": "Composizione di gioielli con perle e dettagli dorati",
@@ -97,8 +85,6 @@
   },
   {
     "src": "/imgs/SfilataDolceGabbana.JPG",
-    "srcWebp": "/imgs/SfilataDolceGabbana.webp",
-    "srcWebpSmall": "",
     "width": 640,
     "height": 960,
     "alt": "Look di sfilata Dolce & Gabbana con focus su accessori",
@@ -113,8 +99,6 @@
   },
   {
     "src": "/imgs/VogueSposaAfrica.JPG",
-    "srcWebp": "/imgs/VogueSposaAfrica.webp",
-    "srcWebpSmall": "",
     "width": 364,
     "height": 480,
     "alt": "Editoriale Vogue Sposa Africa con accessori e headpiece",
@@ -129,8 +113,6 @@
   },
   {
     "src": "/imgs/cerchiettoGioiello.JPG",
-    "srcWebp": "/imgs/cerchiettoGioiello.webp",
-    "srcWebpSmall": "/imgs/cerchiettoGioiello-640.webp",
     "width": 900,
     "height": 1600,
     "alt": "Cerchietto gioiello con finiture decorative",
@@ -145,8 +127,6 @@
   },
   {
     "src": "/imgs/gioielliZar.JPG",
-    "srcWebp": "/imgs/gioielliZar.webp",
-    "srcWebpSmall": "/imgs/gioielliZar-640.webp",
     "width": 1200,
     "height": 1600,
     "alt": "Composizione di gioielli metallici",
