@@ -1,6 +1,7 @@
 [
   {
-    "src": "/imgs/VogueSposa.JPG",
+    "thumbnail": "/imgs/VogueSposa-640.webp",
+    "image": "/imgs/VogueSposa.webp",
     "width": 1066,
     "height": 1600,
     "alt": "Scatto editoriale Vogue Sposa con headpiece couture e styling accessori",
@@ -14,7 +15,8 @@
     "eager": true
   },
   {
-    "src": "/imgs/BraccialeStrass.JPG",
+    "thumbnail": "/imgs/BraccialeStrass-640.webp",
+    "image": "/imgs/BraccialeStrass.webp",
     "width": 1200,
     "height": 1600,
     "alt": "Bracciale gioiello con pietre taglio marquise, styling editoriale haute couture",
@@ -28,7 +30,8 @@
     "eager": false
   },
   {
-    "src": "/imgs/GabbiaVogueSposa.JPG",
+    "thumbnail": "/imgs/GabbiaVogueSposa.webp",
+    "image": "/imgs/GabbiaVogueSposa.webp",
     "width": 360,
     "height": 480,
     "alt": "Headpiece a gabbia realizzato per editoriale Vogue Sposa",
@@ -42,7 +45,8 @@
     "eager": false
   },
   {
-    "src": "/imgs/SpillaGioiello.JPG",
+    "thumbnail": "/imgs/SpillaGioiello-640.webp",
+    "image": "/imgs/SpillaGioiello.webp",
     "width": 1600,
     "height": 1200,
     "alt": "Spilla gioiello con perle e cristalli su base dorata",
@@ -56,7 +60,8 @@
     "eager": false
   },
   {
-    "src": "/imgs/VogueSposaIkebana.JPG",
+    "thumbnail": "/imgs/VogueSposaIkebana.webp",
+    "image": "/imgs/VogueSposaIkebana.webp",
     "width": 348,
     "height": 480,
     "alt": "Editoriale Vogue Sposa Ikebana con accessori couture",
@@ -70,7 +75,8 @@
     "eager": false
   },
   {
-    "src": "/imgs/GioielliPerle.JPG",
+    "thumbnail": "/imgs/GioielliPerle-640.webp",
+    "image": "/imgs/GioielliPerle.webp",
     "width": 1200,
     "height": 1600,
     "alt": "Composizione di gioielli con perle e dettagli dorati",
@@ -84,7 +90,8 @@
     "eager": false
   },
   {
-    "src": "/imgs/SfilataDolceGabbana.JPG",
+    "thumbnail": "/imgs/SfilataDolceGabbana.webp",
+    "image": "/imgs/SfilataDolceGabbana.webp",
     "width": 640,
     "height": 960,
     "alt": "Look di sfilata Dolce & Gabbana con focus su accessori",
@@ -98,7 +105,8 @@
     "eager": false
   },
   {
-    "src": "/imgs/VogueSposaAfrica.JPG",
+    "thumbnail": "/imgs/VogueSposaAfrica.webp",
+    "image": "/imgs/VogueSposaAfrica.webp",
     "width": 364,
     "height": 480,
     "alt": "Editoriale Vogue Sposa Africa con accessori e headpiece",
@@ -112,7 +120,8 @@
     "eager": false
   },
   {
-    "src": "/imgs/cerchiettoGioiello.JPG",
+    "thumbnail": "/imgs/cerchiettoGioiello-640.webp",
+    "image": "/imgs/cerchiettoGioiello.webp",
     "width": 900,
     "height": 1600,
     "alt": "Cerchietto gioiello con finiture decorative",
@@ -126,7 +135,8 @@
     "eager": false
   },
   {
-    "src": "/imgs/gioielliZar.JPG",
+    "thumbnail": "/imgs/gioielliZar-640.webp",
+    "image": "/imgs/gioielliZar.webp",
     "width": 1200,
     "height": 1600,
     "alt": "Composizione di gioielli metallici",

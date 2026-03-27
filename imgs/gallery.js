@@ -2,6 +2,9 @@
   'use strict';
 
   // Renders all portfolio cards into #portfolio-grid and initialises the lightbox.
+  // Image contract (enforced in gallery.json):
+  //   item.thumbnail → -640.webp if available, else full .webp  (used in the grid)
+  //   item.image     → full-size .webp                           (used in the lightbox)
   function renderGallery(items) {
     var grid = document.getElementById('portfolio-grid');
     if (!grid) return;
@@ -17,9 +20,9 @@
       var category   = (lang === 'en' && item.categoryEn) ? item.categoryEn : (item.category || '');
       var desc       = (lang === 'en' && item.descEn)     ? item.descEn     : (item.desc || '');
 
-      // Prefer .webp thumbnail; fall back to original src
-      var srcWebp    = item.src.replace(/\.[^.]+$/, '.webp');
-      var sourceTag  = '<source srcset="' + srcWebp + '" type="image/webp">';
+      // thumbnail is always .webp — no format derivation needed
+      var thumb = item.thumbnail;
+
       var categoryHtml = category
         ? '<div class="cap-category">' + escapeHtml(category) + '</div>'
         : '';
@@ -32,12 +35,9 @@
         '<figure class="port-item reveal" role="button" tabindex="0"' +
           ' aria-label="' + escapeAttr(title) + '" data-index="' + i + '">' +
           '<div class="port-thumb">' +
-            '<picture>' +
-              sourceTag +
-              '<img src="' + item.src + '" loading="' + loading + '"' + fetchAttr +
-                ' decoding="async" width="' + item.width + '" height="' + item.height +
-                '" alt="' + escapeAttr(alt) + '">' +
-            '</picture>' +
+            '<img src="' + thumb + '" loading="' + loading + '"' + fetchAttr +
+              ' decoding="async" width="' + item.width + '" height="' + item.height +
+              '" alt="' + escapeAttr(alt) + '">' +
           '</div>' +
           '<figcaption class="port-caption">' +
             categoryHtml +
@@ -68,10 +68,7 @@
         '<div class="pf-lightbox" id="pf-lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">' +
           '<div class="pf-lightbox-inner">' +
             '<button class="pf-lightbox-close" id="pf-lb-close" aria-label="Close">&times;</button>' +
-            '<picture id="pf-lb-picture">' +
-              '<source id="pf-lb-source" type="image/webp">' +
-              '<img id="pf-lb-img" src="" alt="">' +
-            '</picture>' +
+            '<img id="pf-lb-img" src="" alt="">' +
             '<div class="pf-lightbox-caption" id="pf-lb-caption"></div>' +
           '</div>' +
           '<button class="pf-lightbox-prev" id="pf-lb-prev" aria-label="Previous image">&#8592;</button>' +
@@ -81,7 +78,6 @@
     }
 
     var lb       = document.getElementById('pf-lightbox');
-    var lbSource = document.getElementById('pf-lb-source');
     var lbImg    = document.getElementById('pf-lb-img');
     var lbCap    = document.getElementById('pf-lb-caption');
     var lbClose  = document.getElementById('pf-lb-close');
@@ -91,18 +87,15 @@
     var lastFocused  = null; // element that opened the lightbox (for focus restore)
 
     function openLightbox(index) {
-      var lang   = document.documentElement.lang || 'it';
-      var item   = items[index];
-      var alt    = (lang === 'en' && item.altEn)   ? item.altEn   : item.alt;
-      var title  = (lang === 'en' && item.titleEn) ? item.titleEn : item.title;
-      var fullSrc = item.image || item.src;          // full-size image
-      var webpSrc = fullSrc.replace(/\.[^.]+$/, '.webp');
+      var lang  = document.documentElement.lang || 'it';
+      var item  = items[index];
+      var alt   = (lang === 'en' && item.altEn)   ? item.altEn   : item.alt;
+      var title = (lang === 'en' && item.titleEn) ? item.titleEn : item.title;
 
-      currentIndex       = index;
-      lbSource.srcset    = webpSrc;
-      lbImg.src          = fullSrc;
-      lbImg.alt          = alt;
-      lbCap.textContent  = title;
+      currentIndex      = index;
+      lbImg.src         = item.image;   // always full-size .webp
+      lbImg.alt         = alt;
+      lbCap.textContent = title;
 
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -159,9 +152,10 @@
     // Touch swipe support
     var touchStartX = 0;
     lb.addEventListener('touchstart', function (e) {
-      touchStartX = e.changedTouches[0].clientX;
+      if (e.changedTouches.length) touchStartX = e.changedTouches[0].clientX;
     }, { passive: true });
     lb.addEventListener('touchend', function (e) {
+      if (!e.changedTouches.length) return;
       var dx = e.changedTouches[0].clientX - touchStartX;
       if (Math.abs(dx) > 50) {
         if (dx < 0) showNext(); else showPrev();
