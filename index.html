@@ -159,23 +159,35 @@
     .skill-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-bottom:10px;}
     .skill-card p{font-size:11.5px;line-height:1.85;color:rgba(245,240,232,.42);}
 
-    /* PORTFOLIO */
+    /* PORTFOLIO — scoped refactor, do not touch other sections */
     #portfolio{background:var(--dark);}
-    .portfolio-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;}
+    /* Responsive grid: 3 columns on desktop */
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
     figure{margin:0;}
-    .port-item{position:relative;border:1px solid rgba(201,168,76,.14);overflow:hidden;background:linear-gradient(160deg,rgba(201,168,76,.06),transparent 60%);}
+    /* Card */
+    .port-item{border:1px solid rgba(201,168,76,.14);overflow:hidden;background:#0d0d0d;cursor:pointer;outline:none;}
+    .port-item:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+    /* Thumbnail: locked 3:4 portrait ratio, image fills and crops cleanly */
+    .port-thumb{aspect-ratio:3/4;overflow:hidden;position:relative;}
     .port-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform .55s ease,opacity .55s ease;opacity:.95;}
     .port-item:hover img{transform:scale(1.06);opacity:1;}
-    .port-caption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(to top,rgba(13,13,13,.88),rgba(13,13,13,0));border-top:1px solid rgba(201,168,76,.10);transition:transform .35s ease;}
-    .cap-title{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(245,240,232,.75);margin-bottom:6px;font-weight:600;}
-    .cap-desc{font-size:11.5px;line-height:1.7;color:rgba(245,240,232,.40);max-width:64ch;}
-    .span-6{grid-column:span 6;}
-    .span-4{grid-column:span 4;}
-    .span-8{grid-column:span 8;}
-    .span-12{grid-column:span 12;}
-    .tall{height:520px;}
-    .med{height:420px;}
-    .small{height:320px;}
+    /* Caption sits below the image, never overlapping */
+    .port-caption{padding:14px 16px 18px;border-top:1px solid rgba(201,168,76,.10);background:#0d0d0d;}
+    .cap-category{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+    .cap-title{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(245,240,232,.75);margin-bottom:4px;font-weight:600;}
+    .cap-desc{font-size:11px;line-height:1.7;color:rgba(245,240,232,.35);}
+    /* Lightbox overlay */
+    .pf-lightbox{display:none;position:fixed;inset:0;z-index:500;background:rgba(13,13,13,.95);align-items:center;justify-content:center;}
+    .pf-lightbox.open{display:flex;}
+    .pf-lightbox-inner{position:relative;max-width:90vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;}
+    .pf-lightbox img{max-width:90vw;max-height:80vh;width:auto;height:auto;object-fit:contain;display:block;border:1px solid rgba(201,168,76,.15);}
+    .pf-lightbox-caption{margin-top:14px;text-align:center;color:rgba(245,240,232,.5);font-size:9px;letter-spacing:3px;text-transform:uppercase;}
+    .pf-lightbox-close{position:absolute;top:-42px;right:0;background:none;border:none;color:rgba(245,240,232,.6);font-size:28px;cursor:pointer;line-height:1;padding:4px 8px;transition:color .3s;font-family:inherit;}
+    .pf-lightbox-close:hover,.pf-lightbox-close:focus-visible{color:var(--gold);outline:none;}
+    .pf-lightbox-prev,.pf-lightbox-next{position:fixed;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(245,240,232,.4);font-size:28px;cursor:pointer;padding:12px;transition:color .3s;z-index:501;font-family:inherit;}
+    .pf-lightbox-prev{left:16px;}
+    .pf-lightbox-next{right:16px;}
+    .pf-lightbox-prev:hover,.pf-lightbox-next:hover,.pf-lightbox-prev:focus-visible,.pf-lightbox-next:focus-visible{color:var(--gold);outline:none;}
 
     /* ESPERIENZE */
     .exp-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,.09);}
@@ -237,9 +249,20 @@
       .exp-wrapper{grid-template-columns:1fr;}
       .contact-grid{grid-template-columns:1fr;gap:48px;}
       footer{flex-direction:column;align-items:flex-start;gap:12px;padding:32px 28px;}
-      .portfolio-grid{grid-template-columns:repeat(6,1fr);}
-      .span-12,.span-8,.span-6,.span-4{grid-column:span 6;}
-      .tall,.med,.small{height:320px;}
+      .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+    }
+    /* Portfolio: large desktop → 4 columns */
+    @media(min-width:1400px){
+      .portfolio-grid{grid-template-columns:repeat(4,1fr);}
+    }
+    /* Portfolio: mobile → 1 column */
+    @media(max-width:599px){
+      .portfolio-grid{grid-template-columns:1fr;}
+    }
+    /* Portfolio: landscape phone → 2 cols, wider aspect ratio for shorter cards */
+    @media(max-height:500px) and (orientation:landscape){
+      .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+      .port-thumb{aspect-ratio:4/3;}
     }
   </style>
 </head>
