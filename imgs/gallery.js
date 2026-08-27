@@ -24,10 +24,6 @@
             ' decoding="async" width="' + item.width + '" height="' + item.height +
             '" alt="' + alt + '">' +
         '</picture>' +
-        '<figcaption class="port-caption">' +
-          '<div class="cap-title">' + title + '</div>' +
-          '<div class="cap-desc">' + desc + '</div>' +
-        '</figcaption>' +
       '</figure>';
     }).join('');
 
