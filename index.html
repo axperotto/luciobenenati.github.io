@@ -45,7 +45,7 @@
         "url": "https://www.luciobenenati.com/",
         "image": "https://www.luciobenenati.com/Unga/VogueSposa.JPG",
         "jobTitle": "Fashion Designer – Accessories & Headpiece (Special Projects, R&D)",
-        "description": "Fashion Designer specializzato nella progettazione di accessori e headpiece con esperienza in haute couture, artigianato Made in Italy, lavorazioni sartoriali, fashion styling e design di monili.",
+        "description": "Fashion Designer specializzato nella progettazione di accessori e headpiece con esperienza in haute couture, artigianato Made in Italy, lavorazioni sartoriali, fashion styling e design di gioielli.",
         "email": "mailto:luciobenenati@hotmail.com",
         "telephone": "+39 3283745523",
         "address": { "@type": "PostalAddress", "addressCountry": "IT" },
@@ -243,16 +243,13 @@
     }
 
     /* LIGHTBOX */
-    #lb-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.95);align-items:center;justify-content:center;}
-    #lb-overlay.open{display:flex;}
-    #lb-img{max-width:90vw;max-height:90vh;object-fit:contain;border:1px solid rgba(201,168,76,.15);user-select:none;-webkit-user-drag:none;}
-    #lb-close{position:absolute;top:18px;right:22px;background:none;border:none;color:rgba(245,240,232,.7);font-size:28px;cursor:pointer;line-height:1;padding:4px 8px;transition:color .2s;}
-    #lb-close:hover{color:#c9a84c;}
-    .lb-arrow{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(245,240,232,.6);font-size:42px;cursor:pointer;padding:10px 18px;line-height:1;transition:color .2s,transform .2s;user-select:none;}
-    .lb-arrow:hover{color:#c9a84c;}
-    #lb-prev{left:12px;}
-    #lb-next{right:12px;}
-    #lb-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:3px;color:rgba(245,240,232,.35);font-family:'Montserrat',sans-serif;}
+    .lb-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s ease;padding:24px;}
+    .lb-overlay.lb-visible{opacity:1;pointer-events:auto;}
+    .lb-img{max-width:90vw;max-height:80vh;object-fit:contain;border:1px solid rgba(201,168,76,.25);box-shadow:0 12px 48px rgba(0,0,0,.6);transition:transform .3s ease;}
+    .lb-overlay.lb-visible .lb-img{transform:scale(1);}
+    .lb-caption{margin-top:18px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,240,232,.6);text-align:center;}
+    .lb-close{position:absolute;top:20px;right:28px;background:none;border:none;color:var(--gold);font-size:36px;cursor:pointer;z-index:10;line-height:1;transition:color .3s;font-family:'Cormorant Garamond',serif;}
+    .lb-close:hover{color:var(--cream);}
   </style>
 </head>
 
@@ -289,6 +286,10 @@
         Fashion Designer creativo specializzato nella progettazione di <strong>accessori</strong> e <strong>headpiece</strong>.
         Lavoro tra <strong>haute couture</strong>, artigianato <strong>Made in Italy</strong> e <strong>lavorazioni sartoriali</strong>,
         con focus su special projects, ricerca materiali e sviluppo di pezzi ad alto impatto visivo.
+        
+Con oltre 20 anni di esperienza nel settore moda, collaborando con marchi leader
+come Dolce & Gabbana, Dior, Gucci e Versace. Esperto nella creazione di collezioni esclusive di accessori e ricami preziosi per abbigliamento di alta moda, pelletteria di lusso e calzature. Competente nella gestione completa del processo creativo, dallo sviluppo del concept alla produzione finale, con una particolare attenzione all'innovazione stilistica e alla qualità artigianale. Abile nel coordinamento di team creativi e collaborazioni con artigiani per garantire l'unicità e l'eccellenza dei prodotti. Grazie alla mia esperienza nel settore del lusso, offro un contributo strategico per il rafforzamento del posizionamento
+e dell'immagine del brand.
       </p>
 
       <div class="cta-row">
@@ -343,7 +344,7 @@
       </div>
       <div class="skill-card reveal">
         <span class="skill-glyph" aria-hidden="true">✦</span>
-        <h3 data-i18n="skill_3_title">Design di Monili</h3>
+        <h3 data-i18n="skill_3_title">Design di Gioielli</h3>
         <p data-i18n="skill_3_desc">Sviluppo di gioielli e componenti decorativi, equilibrio tra luce, volumi, finiture e identità visiva.</p>
       </div>
       <div class="skill-card reveal">
@@ -457,7 +458,7 @@
           <li><span data-i18n="exp_list_4">Special projects</span> <span class="icon">✦</span></li>
           <li><span data-i18n="exp_list_5">Research &amp; Development</span> <span class="icon">✦</span></li>
           <li><span data-i18n="exp_list_6">Fashion styling</span> <span class="icon">✦</span></li>
-          <li><span data-i18n="exp_list_7">Design di monili</span> <span class="icon">✦</span></li>
+          <li><span data-i18n="exp_list_7">Design di Gioielli</span> <span class="icon">✦</span></li>
           <li><span data-i18n="exp_list_8">Prototipazione &amp; qualità</span> <span class="icon">✦</span></li>
         </ul>
       </div>
@@ -473,14 +474,6 @@
     </div>
   </footer>
 
-  <div id="lb-overlay" role="dialog" aria-modal="true" aria-label="Lightbox">
-    <button id="lb-close" aria-label="Chiudi">&#10005;</button>
-    <button class="lb-arrow" id="lb-prev" aria-label="Precedente">&#8249;</button>
-    <img id="lb-img" src="" alt="">
-    <button class="lb-arrow" id="lb-next" aria-label="Successiva">&#8250;</button>
-    <div id="lb-counter"></div>
-  </div>
-
   <script src="imgs/gallery.js"></script>
   <script>
     // --- TRANSLATION DICTIONARY ---
@@ -489,7 +482,7 @@
         nav_skills: "Competenze", nav_portfolio: "Portfolio", nav_exp: "Esperienze", nav_manifesto: "Manifesto", nav_contact: "Contatti",
         hero_eyebrow: "Fashion Designer · Special Projects · R&amp;D",
         hero_tagline: "Fashion Designer di accessori &amp; headpiece couture",
-        hero_desc: "Fashion Designer creativo specializzato nella progettazione di <strong>accessori</strong> e <strong>headpiece</strong>. Lavoro tra <strong>haute couture</strong>, artigianato <strong>Made in Italy</strong> e <strong>lavorazioni sartoriali</strong>, con focus su special projects, ricerca materiali e sviluppo di pezzi ad alto impatto visivo.",
+        hero_desc: "Fashion Designer creativo, specializzato nella progettazione di <strong>accessori</strong> e <strong>headpiece</strong>. Il mio lavoro unisce <strong>haute couture</strong>, artigianalità <strong>Made in Italy</strong> e <strong>savoir-faire sartoriale</strong>, con un focus su special projects, ricerca dei materiali e sviluppo di creazioni ad alto impatto visivo.</br></br>Con oltre vent’anni di esperienza nel settore moda, ho collaborato con maison e brand internazionali quali Dolce & Gabbana, Dior, Gucci e Versace. Mi occupo della creazione di collezioni esclusive di <strong>accessori</strong> e <strong>ricami preziosi</strong> per l’alta moda, la pelletteria di lusso e il footwear.</br></br>Seguo l’intero processo creativo, dalla definizione del concept allo sviluppo del prodotto e alla produzione finale, con particolare attenzione all’<strong>innovazione stilistica</strong>, alla qualità dei materiali e all’<strong>eccellenza artigianale</strong>. Coordino team creativi e collaboro con maestranze specializzate per dare vita a pezzi unici, capaci di valorizzare l’identità e il posizionamento del brand.",
         btn_portfolio: "Vedi Portfolio", btn_contact: "Contatti",
         dg_label: "Focus", dg_brand: "Design &amp;<br>Sviluppo",
         dg_li_1: "Special projects · Research &amp; Development", dg_li_2: "Haute couture e artigianato Made in Italy", dg_li_3: "Ricerca materiali, prototipi, campionari", dg_li_4: "Coordinamento creativo e controllo qualità",
@@ -497,7 +490,7 @@
         sec_tag_skills: "Expertise", sec_title_skills: "Il mio<br><em>Savoir-Faire</em>",
         skill_1_title: "Design Accessori Lusso", skill_1_desc: "Progettazione di accessori esclusivi con attenzione al dettaglio estetico, proporzioni e resa fotografica in contesto couture.",
         skill_2_title: "Headpiece Couture", skill_2_desc: "Creazione di headpiece scenografici e raffinati per sfilate, editoriali e progetti speciali, con ricerca di forme e materiali.",
-        skill_3_title: "Design di Monili", skill_3_desc: "Sviluppo di gioielli e componenti decorativi, equilibrio tra luce, volumi, finiture e identità visiva.",
+        skill_3_title: "Design di Gioielli", skill_3_desc: "Sviluppo di gioielli e componenti decorativi, equilibrio tra luce, volumi, finiture e identità visiva.",
         skill_4_title: "Ricerca &amp; Materiali", skill_4_desc: "Selezione e sviluppo materiali pregiati, studio cromatico, fattibilità produttiva e coerenza con il concept.",
         skill_5_title: "Special Projects", skill_5_desc: "Progetti speciali ad alto contenuto creativo, prototipazione e supervisione dei campionari con standard di qualità elevati.",
         skill_6_title: "Fashion Styling", skill_6_desc: "Supporto creativo per set editoriali: costruzione di look, accessori e dettagli per storytelling visivo coerente e memorabile.",
@@ -512,7 +505,7 @@
         sec_tag_contact: "Contatti", sec_title_contact: "Collaboriamo<br><em>Insieme</em>",
         contact_h3: "Disponibile per collaborazioni e progetti speciali", contact_p: "Per proposte professionali, special projects, consulenze creative e richieste stampa/editoriali.",
         contact_label_phone: "Telefono",
-        exp_list_1: "Haute couture", exp_list_2: "Artigianato Made in Italy", exp_list_3: "Lavorazioni sartoriali", exp_list_4: "Special projects", exp_list_5: "Research &amp; Development", exp_list_6: "Fashion styling", exp_list_7: "Design di monili", exp_list_8: "Prototipazione &amp; qualità",
+        exp_list_1: "Haute couture", exp_list_2: "Artigianato Made in Italy", exp_list_3: "Lavorazioni sartoriali", exp_list_4: "Special projects", exp_list_5: "Research &amp; Development", exp_list_6: "Fashion styling", exp_list_7: "Design di Gioielli", exp_list_8: "Prototipazione &amp; qualità",
         footer_copy: "© 2026 Lucio Benenati — Fashion Designer"
       },
       en: {

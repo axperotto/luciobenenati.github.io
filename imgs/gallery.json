@@ -18,6 +18,16 @@
     "eager": false
   },
   {
+    "src": "/imgs/9.JPG",
+    "width": 364,
+    "height": 480,
+    "alt": "",
+    "span": "span-6",
+    "size": "tall",
+    "eager": false,
+    "pos": "top center"
+  },
+  {
     "src": "/imgs/3.JPG",
     "width": 360,
     "height": 480,
@@ -72,19 +82,18 @@
     "eager": false
   },
   {
-    "src": "/imgs/9.JPG",
-    "width": 364,
-    "height": 480,
-    "alt": "",
-    "span": "span-6",
-    "size": "tall",
-    "eager": false,
-    "pos": "top center"
-  },
-  {
     "src": "/imgs/11.jpg",
     "width": 3024,
     "height": 4032,
+    "alt": "",
+    "span": "span-6",
+    "size": "tall",
+    "eager": false
+  },
+  {
+    "src": "/imgs/15.JPG",
+    "width": 828,
+    "height": 1071,
     "alt": "",
     "span": "span-6",
     "size": "tall",
@@ -109,27 +118,9 @@
     "eager": false
   },
   {
-    "src": "/imgs/15.JPG",
-    "width": 828,
-    "height": 1071,
-    "alt": "",
-    "span": "span-6",
-    "size": "tall",
-    "eager": false
-  },
-  {
     "src": "/imgs/17.JPG",
     "width": 2448,
     "height": 3264,
-    "alt": "",
-    "span": "span-6",
-    "size": "tall",
-    "eager": false
-  },
-  {
-    "src": "/imgs/12.jpg",
-    "width": 3024,
-    "height": 4032,
     "alt": "",
     "span": "span-6",
     "size": "tall",
@@ -145,15 +136,6 @@
     "eager": false
   },
   {
-    "src": "/imgs/19.jpg",
-    "width": 3024,
-    "height": 4032,
-    "alt": "",
-    "span": "span-6",
-    "size": "tall",
-    "eager": false
-  },
-  {
     "src": "/imgs/20.jpg",
     "width": 1992,
     "height": 2988,
@@ -162,15 +144,6 @@
     "size": "tall",
     "eager": false,
     "pos": "top center"
-  },
-  {
-    "src": "/imgs/22.JPG",
-    "width": 900,
-    "height": 1600,
-    "alt": "",
-    "span": "span-6",
-    "size": "tall",
-    "eager": false
   },
   {
     "src": "/imgs/21.JPG",
@@ -218,15 +191,6 @@
     "eager": false
   },
   {
-    "src": "/imgs/27.JPG",
-    "width": 2298,
-    "height": 3033,
-    "alt": "",
-    "span": "span-6",
-    "size": "tall",
-    "eager": false
-  },
-  {
     "src": "/imgs/28.JPG",
     "width": 640,
     "height": 640,
@@ -252,7 +216,8 @@
     "alt": "",
     "span": "span-6",
     "size": "tall",
-    "eager": false
+    "eager": false,
+    "pos": "top center"
   },
   {
     "src": "/imgs/31.jpg",
@@ -270,7 +235,8 @@
     "alt": "",
     "span": "span-6",
     "size": "tall",
-    "eager": false
+    "eager": false,
+    "pos": "center right"
   },
   {
     "src": "/imgs/33.JPG",
@@ -283,13 +249,14 @@
     "pos": "top center"
   },
   {
-    "src": "/imgs/34.JPG",
-    "width": 960,
-    "height": 640,
+    "src": "/imgs/IMG_1193.jpg",
+    "width": 828,
+    "height": 1016,
     "alt": "",
-    "span": "span-12",
+    "span": "span-6",
     "size": "tall",
-    "eager": false
+    "eager": false,
+    "pos": "top center"
   },
   {
     "src": "/imgs/35.JPG",
@@ -305,7 +272,7 @@
     "width": 1144,
     "height": 1088,
     "alt": "",
-    "span": "span-6",
+    "span": "span-12",
     "size": "tall",
     "eager": false
   },
