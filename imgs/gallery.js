@@ -11,13 +11,11 @@
       var loading = item.eager ? 'eager' : 'lazy';
       var fetchAttr = item.eager ? ' fetchpriority="high"' : '';
       var alt = (lang === 'en' && item.altEn) ? item.altEn : item.alt;
-      var title = lang === 'en' ? (item.titleEn || item.title) : item.title;
-      var desc = lang === 'en' ? (item.descEn || item.desc) : item.desc;
 
       var srcWebp = /\.[^./]+$/.test(item.src) ? item.src.replace(/\.[^.]+$/, '.webp') : '';
       var sourceTag = srcWebp ? '<source srcset="' + srcWebp + '" type="image/webp">' : '';
 
-      return '<figure class="port-item ' + item.span + ' ' + item.size + ' reveal">' +
+      return '<figure class="port-item ' + item.span + ' ' + item.size + '">' +
         '<picture>' +
           sourceTag +
           '<img src="' + item.src + '" loading="' + loading + '"' + fetchAttr +
@@ -29,18 +27,17 @@
 
     grid.innerHTML = html;
 
-    // Observe new reveal elements for scroll animation, staggering items that
-    // enter the viewport at the same time by 80 ms each.
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry, i) {
-        if (entry.isIntersecting) {
-          setTimeout(function () { entry.target.classList.add('visible'); }, i * 80);
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    grid.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
+    // Stagger-fade items in after injection so they are always visible
+    // regardless of scroll position when the fetch resolves.
+    grid.querySelectorAll('.port-item').forEach(function (el, i) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity .6s ease, transform .6s ease';
+      setTimeout(function () {
+        el.style.opacity = '';
+        el.style.transform = '';
+      }, 60 + i * 40);
+    });
   }
 
   // Absolute path works from both / (IT) and /en/ (EN) pages, while a relative
