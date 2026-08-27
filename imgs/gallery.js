@@ -12,12 +12,14 @@
       var fetchAttr = item.eager ? ' fetchpriority="high"' : '';
       var alt = item.alt || '';
 
+      var posStyle = item.pos ? 'object-position:' + item.pos + ';' : '';
+
       return '<figure class="port-item ' + item.span + ' ' + item.size + '"' +
           ' data-lb-idx="' + idx + '" style="cursor:pointer;" tabindex="0"' +
           ' role="button" aria-label="Foto ' + (idx + 1) + '">' +
         '<img src="' + item.src + '" loading="' + loading + '"' + fetchAttr +
           ' decoding="async" width="' + item.width + '" height="' + item.height +
-          '" alt="' + alt + '">' +
+          '" style="' + posStyle + '" alt="' + alt + '">' +
       '</figure>';
     }).join('');
 
