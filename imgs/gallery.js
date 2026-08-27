@@ -16,12 +16,17 @@
       var sourceTag = srcWebp ? '<source srcset="' + srcWebp + '" type="image/webp">' : '';
 
       return '<figure class="port-item ' + item.span + ' ' + item.size + '">' +
-        '<picture>' +
-          sourceTag +
-          '<img src="' + item.src + '" loading="' + loading + '"' + fetchAttr +
-            ' decoding="async" width="' + item.width + '" height="' + item.height +
-            '" alt="' + alt + '">' +
-        '</picture>' +
+        '<a href="' + item.src + '"' +
+          ' data-pswp-width="' + item.width + '"' +
+          ' data-pswp-height="' + item.height + '"' +
+          ' target="_blank">' +
+          '<picture>' +
+            sourceTag +
+            '<img src="' + item.src + '" loading="' + loading + '"' + fetchAttr +
+              ' decoding="async" width="' + item.width + '" height="' + item.height +
+              '" alt="' + alt + '">' +
+          '</picture>' +
+        '</a>' +
       '</figure>';
     }).join('');
 
@@ -38,6 +43,26 @@
         el.style.transform = '';
       }, 60 + i * 40);
     });
+
+    // Initialize PhotoSwipe lightbox once scripts are loaded.
+    // PhotoSwipe is loaded with defer so we wait for DOMContentLoaded/load.
+    function initLightbox() {
+      if (typeof PhotoSwipeLightbox === 'undefined') return;
+      var lightbox = new PhotoSwipeLightbox({
+        gallery: '#portfolio-grid',
+        children: 'a[data-pswp-width]',
+        pswpModule: PhotoSwipe,
+        bgOpacity: 0.92,
+        padding: { top: 20, bottom: 20, left: 20, right: 20 }
+      });
+      lightbox.init();
+    }
+
+    if (document.readyState === 'complete') {
+      initLightbox();
+    } else {
+      window.addEventListener('load', initLightbox);
+    }
   }
 
   // Absolute path works from both / (IT) and /en/ (EN) pages, while a relative
@@ -50,3 +75,4 @@
     .then(renderGallery)
     .catch(function (err) { console.error(err); });
 }());
+
