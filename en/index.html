@@ -241,6 +241,18 @@
       .span-12,.span-8,.span-6,.span-4{grid-column:span 6;}
       .tall,.med,.small{height:320px;}
     }
+
+    /* LIGHTBOX */
+    #lb-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.95);align-items:center;justify-content:center;}
+    #lb-overlay.open{display:flex;}
+    #lb-img{max-width:90vw;max-height:90vh;object-fit:contain;border:1px solid rgba(201,168,76,.15);user-select:none;-webkit-user-drag:none;}
+    #lb-close{position:absolute;top:18px;right:22px;background:none;border:none;color:rgba(245,240,232,.7);font-size:28px;cursor:pointer;line-height:1;padding:4px 8px;transition:color .2s;}
+    #lb-close:hover{color:#c9a84c;}
+    .lb-arrow{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(245,240,232,.6);font-size:42px;cursor:pointer;padding:10px 18px;line-height:1;transition:color .2s,transform .2s;user-select:none;}
+    .lb-arrow:hover{color:#c9a84c;}
+    #lb-prev{left:12px;}
+    #lb-next{right:12px;}
+    #lb-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:3px;color:rgba(245,240,232,.35);font-family:'Montserrat',sans-serif;}
   </style>
 </head>
 
@@ -273,7 +285,8 @@
 
       <h2 class="hero-tagline" data-i18n="hero_tagline">Couture accessories &amp; headpiece Fashion Designer</h2>
 
-      <p class="hero-desc" data-i18n="hero_desc">Creative Fashion Designer specializing in <strong>accessories</strong> and <strong>headpieces</strong>. Working across <strong>haute couture</strong>, <strong>Made in Italy</strong> craftsmanship, and <strong>sartorial techniques</strong>, focusing on special projects, materials research, and developing high-visual-impact pieces.</p>
+      <p class="hero-desc" data-i18n="hero_desc">Creative Fashion Designer specializing in <strong>accessories</strong> and <strong>headpieces</strong>. Working across <strong>haute couture</strong>, <strong>Made in Italy</strong> craftsmanship, and <strong>sartorial techniques</strong>, focusing on special projects, materials research, and developing high-visual-impact pieces.
+      </p>
 
       <div class="cta-row">
         <a href="https://www.linkedin.com/in/luciobenenati" target="_blank" rel="noopener noreferrer" class="btn btn-primary">LinkedIn</a>
@@ -454,6 +467,14 @@
     </div>
   </footer>
 
+  <div id="lb-overlay" role="dialog" aria-modal="true" aria-label="Lightbox">
+    <button id="lb-close" aria-label="Close">&#10005;</button>
+    <button class="lb-arrow" id="lb-prev" aria-label="Previous">&#8249;</button>
+    <img id="lb-img" src="" alt="">
+    <button class="lb-arrow" id="lb-next" aria-label="Next">&#8250;</button>
+    <div id="lb-counter"></div>
+  </div>
+
   <script src="../imgs/gallery.js"></script>
   <script>
     // --- TRANSLATION DICTIONARY ---
@@ -462,7 +483,7 @@
         nav_skills: "Competenze", nav_portfolio: "Portfolio", nav_exp: "Esperienze", nav_manifesto: "Manifesto", nav_contact: "Contatti",
         hero_eyebrow: "Fashion Designer · Special Projects · R&amp;D",
         hero_tagline: "Fashion Designer di accessori &amp; headpiece couture",
-        hero_desc: "Fashion Designer creativo specializzato nella progettazione di <strong>accessori</strong> e <strong>headpiece</strong>. Lavoro tra <strong>haute couture</strong>, artigianato <strong>Made in Italy</strong> e <strong>lavorazioni sartoriali</strong>, con focus su special projects, ricerca materiali e sviluppo di pezzi ad alto impatto visivo.",
+        hero_desc: "Fashion Designer creativo specializzato nella progettazione di <strong>accessori</strong> e <strong>headpiece</strong>. Lavoro tra <strong>haute couture</strong>, artigianato <strong>Made in Italy</strong> e <strong>lavorazioni sartoriali</strong>, con focus su special projects, ricerca materiali e sviluppo di pezzi ad alto impatto visivo. </br>Fashion Designer e Consulente Creativo specializzato nella progettazione di Accessori di Lusso con oltre 20 anni di esperienza nel settore moda, collaborando con marchi leader </br>come Dolce & Gabbana, Dior, Gucci e Versace. Esperto nella creazione di collezioni esclusive di accessori e ricami preziosi per abbigliamento di alta moda, pelletteria di lusso e calzature. Competente nella gestione completa del processo creativo, dallo sviluppo del concept alla produzione finale, con una particolare attenzione all'innovazione stilistica e alla qualità artigianale. Abile nel coordinamento di team creativi e collaborazioni con artigiani per garantire l'unicità e l'eccellenza dei prodotti. Grazie alla mia esperienza nel settore del lusso, offro un contributo strategico per il rafforzamento del posizionamento e dell'immagine del brand.",
         btn_portfolio: "Vedi Portfolio", btn_contact: "Contatti",
         dg_label: "Focus", dg_brand: "Design &amp;<br>Sviluppo",
         dg_li_1: "Special projects · Research &amp; Development", dg_li_2: "Haute couture e artigianato Made in Italy", dg_li_3: "Ricerca materiali, prototipi, campionari", dg_li_4: "Coordinamento creativo e controllo qualità",
