@@ -182,9 +182,18 @@
     "eager": false
   },
   {
-    "src": "/imgs/26.JPG",
-    "width": 2168,
-    "height": 3264,
+    "src": "/imgs/1B8D8696-4BDA-463F-93BC-48F56576DA01.JPG",
+    "width": 1440,
+    "height": 1800,
+    "alt": "",
+    "span": "span-6",
+    "size": "tall",
+    "eager": false
+  },
+  {
+    "src": "/imgs/FullSizeRender-preview.JPG",
+    "width": 3024,
+    "height": 4032,
     "alt": "",
     "span": "span-6",
     "size": "tall",
@@ -229,16 +238,6 @@
     "eager": false
   },
   {
-    "src": "/imgs/32.jpg",
-    "width": 3024,
-    "height": 4032,
-    "alt": "",
-    "span": "span-6",
-    "size": "tall",
-    "eager": false,
-    "pos": "center right"
-  },
-  {
     "src": "/imgs/33.JPG",
     "width": 992,
     "height": 660,
@@ -247,6 +246,25 @@
     "size": "tall",
     "eager": false,
     "pos": "top center"
+  },
+  {
+    "src": "/imgs/IMG_0108.jpg",
+    "width": 4032,
+    "height": 3024,
+    "alt": "",
+    "span": "span-6",
+    "size": "tall",
+    "eager": false
+  },
+  {
+    "src": "/imgs/32.jpg",
+    "width": 3024,
+    "height": 4032,
+    "alt": "",
+    "span": "span-6",
+    "size": "tall",
+    "eager": false,
+    "pos": "center right"
   },
   {
     "src": "/imgs/IMG_1193.jpg",
